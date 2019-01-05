@@ -542,7 +542,7 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-settime:u26
+settime:u25
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -785,24 +785,24 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-settime:u26|mult10b:u25_2
-settime:u26|mult10b:u25_3
-settime:u26|mult10b:u25_4
-setprice:u28|mult10b:u28_2
-setprice:u28|mult10b:u28_3
-setprice:u28|mult10b:u28_4
-setprice:u28|mult10b:u28_5
-setprice:u28|mult10b:u28_6
-setprice:u28|mult10b:u28_7
-setprice:u28|mult10b:u28_8
-setprice:u28|mult10b:u28_9
-setprice:u28|mult10b:u28_10
-setprice:u28|mult10b:u28_11
-setprice:u28|mult10b:u28_12
-setprice:u28|mult10b:u28_13
-setprice:u28|mult10b:u28_14
-setprice:u28|mult10b:u28_15
-setprice:u28|mult10b:u28_16
+settime:u25|mult10b:u25_2
+settime:u25|mult10b:u25_3
+settime:u25|mult10b:u25_4
+setprice:u27|mult10b:u28_2
+setprice:u27|mult10b:u28_3
+setprice:u27|mult10b:u28_4
+setprice:u27|mult10b:u28_5
+setprice:u27|mult10b:u28_6
+setprice:u27|mult10b:u28_7
+setprice:u27|mult10b:u28_8
+setprice:u27|mult10b:u28_9
+setprice:u27|mult10b:u28_10
+setprice:u27|mult10b:u28_11
+setprice:u27|mult10b:u28_12
+setprice:u27|mult10b:u28_13
+setprice:u27|mult10b:u28_14
+setprice:u27|mult10b:u28_15
+setprice:u27|mult10b:u28_16
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -853,24 +853,24 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-settime:u26|mult10b:u25_2|mult4b:u25_1
-settime:u26|mult10b:u25_3|mult4b:u25_1
-settime:u26|mult10b:u25_4|mult4b:u25_1
-setprice:u28|mult10b:u28_2|mult4b:u25_1
-setprice:u28|mult10b:u28_3|mult4b:u25_1
-setprice:u28|mult10b:u28_4|mult4b:u25_1
-setprice:u28|mult10b:u28_5|mult4b:u25_1
-setprice:u28|mult10b:u28_6|mult4b:u25_1
-setprice:u28|mult10b:u28_7|mult4b:u25_1
-setprice:u28|mult10b:u28_8|mult4b:u25_1
-setprice:u28|mult10b:u28_9|mult4b:u25_1
-setprice:u28|mult10b:u28_10|mult4b:u25_1
-setprice:u28|mult10b:u28_11|mult4b:u25_1
-setprice:u28|mult10b:u28_12|mult4b:u25_1
-setprice:u28|mult10b:u28_13|mult4b:u25_1
-setprice:u28|mult10b:u28_14|mult4b:u25_1
-setprice:u28|mult10b:u28_15|mult4b:u25_1
-setprice:u28|mult10b:u28_16|mult4b:u25_1
+settime:u25|mult10b:u25_2|mult4b:u25_1
+settime:u25|mult10b:u25_3|mult4b:u25_1
+settime:u25|mult10b:u25_4|mult4b:u25_1
+setprice:u27|mult10b:u28_2|mult4b:u25_1
+setprice:u27|mult10b:u28_3|mult4b:u25_1
+setprice:u27|mult10b:u28_4|mult4b:u25_1
+setprice:u27|mult10b:u28_5|mult4b:u25_1
+setprice:u27|mult10b:u28_6|mult4b:u25_1
+setprice:u27|mult10b:u28_7|mult4b:u25_1
+setprice:u27|mult10b:u28_8|mult4b:u25_1
+setprice:u27|mult10b:u28_9|mult4b:u25_1
+setprice:u27|mult10b:u28_10|mult4b:u25_1
+setprice:u27|mult10b:u28_11|mult4b:u25_1
+setprice:u27|mult10b:u28_12|mult4b:u25_1
+setprice:u27|mult10b:u28_13|mult4b:u25_1
+setprice:u27|mult10b:u28_14|mult4b:u25_1
+setprice:u27|mult10b:u28_15|mult4b:u25_1
+setprice:u27|mult10b:u28_16|mult4b:u25_1
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -936,7 +936,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-or5price:u29
+or5price:u28
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -1002,7 +1002,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-set_price:u27
+set_price:u26
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -1035,7 +1035,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-SetInit:u25
+SetInit:u24
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -1102,7 +1102,7 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-or2time:u30
+or2time:u29
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -1232,40 +1232,6 @@ remove_jitter:u20
 remove_jitter:u21
 remove_jitter:u22
 remove_jitter:u23
-remove_jitter:u24
-}
-# lmf
-..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-main
-# storage
-db|main.(0).cnf
-db|main.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-main.vhd
-8f133fa3a41d2c83a8103be7dd30a66e
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -1331,7 +1297,40 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-setprice:u28
+setprice:u27
+}
+# lmf
+..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|main.(0).cnf
+db|main.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+main.vhd
+45eac43b8c685d2dc0d1f7e8fc865066
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf

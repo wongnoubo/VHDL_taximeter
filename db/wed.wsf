@@ -2625,10 +2625,10 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 1915499360;
+		ZEND = 957749680;
 		NUMERATOR = 1064;
-		DENOMINATOR = 1915499360;
-		TOP_INDEX = 56;
+		DENOMINATOR = 957749680;
+		TOP_INDEX = 54;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -3463,368 +3463,8 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price";
-		INDEX = 103;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[7]";
-		INDEX = 104;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[6]";
-		INDEX = 105;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[5]";
-		INDEX = 106;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[4]";
-		INDEX = 107;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[3]";
-		INDEX = 108;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[2]";
-		INDEX = 109;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[1]";
-		INDEX = 110;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_mileage_price[0]";
-		INDEX = 111;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price";
-		INDEX = 112;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[7]";
-		INDEX = 113;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[6]";
-		INDEX = 114;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[5]";
-		INDEX = 115;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[4]";
-		INDEX = 116;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[3]";
-		INDEX = 117;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[2]";
-		INDEX = 118;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[1]";
-		INDEX = 119;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_starting_price[0]";
-		INDEX = 120;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price";
-		INDEX = 121;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[7]";
-		INDEX = 122;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[6]";
-		INDEX = 123;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[5]";
-		INDEX = 124;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[4]";
-		INDEX = 125;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[3]";
-		INDEX = 126;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[2]";
-		INDEX = 127;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[1]";
-		INDEX = 128;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_timing_price[0]";
-		INDEX = 129;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price";
-		INDEX = 130;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[7]";
-		INDEX = 131;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[6]";
-		INDEX = 132;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[5]";
-		INDEX = 133;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[4]";
-		INDEX = 134;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[3]";
-		INDEX = 135;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[2]";
-		INDEX = 136;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[1]";
-		INDEX = 137;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|night_starting_price[0]";
-		INDEX = 138;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price";
-		INDEX = 139;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[7]";
-		INDEX = 140;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[6]";
-		INDEX = 141;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[5]";
-		INDEX = 142;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[4]";
-		INDEX = 143;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[3]";
-		INDEX = 144;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[2]";
-		INDEX = 145;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[1]";
-		INDEX = 146;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "setprice:u28|day_long_distance_price[0]";
-		INDEX = 147;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "lingcheng:u13|ceout";
-		INDEX = 148;
+		INDEX = 103;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3832,7 +3472,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum";
-		INDEX = 149;
+		INDEX = 104;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3840,7 +3480,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[13]";
-		INDEX = 150;
+		INDEX = 105;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3848,7 +3488,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[12]";
-		INDEX = 151;
+		INDEX = 106;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3856,7 +3496,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[11]";
-		INDEX = 152;
+		INDEX = 107;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3864,7 +3504,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[10]";
-		INDEX = 153;
+		INDEX = 108;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3872,7 +3512,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[9]";
-		INDEX = 154;
+		INDEX = 109;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3880,7 +3520,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[8]";
-		INDEX = 155;
+		INDEX = 110;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3888,7 +3528,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[7]";
-		INDEX = 156;
+		INDEX = 111;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3896,7 +3536,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[6]";
-		INDEX = 157;
+		INDEX = 112;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3904,7 +3544,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[5]";
-		INDEX = 158;
+		INDEX = 113;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3912,7 +3552,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[4]";
-		INDEX = 159;
+		INDEX = 114;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3920,7 +3560,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[3]";
-		INDEX = 160;
+		INDEX = 115;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3928,7 +3568,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[2]";
-		INDEX = 161;
+		INDEX = 116;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3936,7 +3576,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[1]";
-		INDEX = 162;
+		INDEX = 117;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3944,7 +3584,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|mileage_price_sum[0]";
-		INDEX = 163;
+		INDEX = 118;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3952,7 +3592,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum";
-		INDEX = 164;
+		INDEX = 119;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3960,7 +3600,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[13]";
-		INDEX = 165;
+		INDEX = 120;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3968,7 +3608,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[12]";
-		INDEX = 166;
+		INDEX = 121;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3976,7 +3616,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[11]";
-		INDEX = 167;
+		INDEX = 122;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3984,7 +3624,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[10]";
-		INDEX = 168;
+		INDEX = 123;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3992,7 +3632,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[9]";
-		INDEX = 169;
+		INDEX = 124;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4000,7 +3640,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[8]";
-		INDEX = 170;
+		INDEX = 125;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4008,7 +3648,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[7]";
-		INDEX = 171;
+		INDEX = 126;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4016,7 +3656,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[6]";
-		INDEX = 172;
+		INDEX = 127;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4024,7 +3664,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[5]";
-		INDEX = 173;
+		INDEX = 128;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4032,7 +3672,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[4]";
-		INDEX = 174;
+		INDEX = 129;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4040,7 +3680,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[3]";
-		INDEX = 175;
+		INDEX = 130;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4048,7 +3688,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[2]";
-		INDEX = 176;
+		INDEX = 131;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4056,7 +3696,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[1]";
-		INDEX = 177;
+		INDEX = 132;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4064,7 +3704,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "unit_price:u15|timing_price_sum[0]";
-		INDEX = 178;
+		INDEX = 133;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4072,7 +3712,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "state_controller:u12|current_state.beyond_starting_price";
-		INDEX = 179;
+		INDEX = 134;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4080,7 +3720,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "state_controller:u12|current_state.start_reset";
-		INDEX = 180;
+		INDEX = 135;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4088,7 +3728,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "state_controller:u12|current_state.stop";
-		INDEX = 181;
+		INDEX = 136;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -4096,7 +3736,7 @@ VECTOR("D:/develop/vhdl_projects/VHDL_taxi-main/db/main.sim.cvwf")
 	}
 	LINE{
 		SIGNAL = "state_controller:u12|current_state.within_starting_price";
-		INDEX = 182;
+		INDEX = 137;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

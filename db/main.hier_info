@@ -1,16 +1,39 @@
 |main
-key_start => remove_jitter:u19.key_in
+key_start => or2time:u29.ce
+key_start => or5price:u28.ce
+key_start => setprice:u27.ce
+key_start => settime:u25.ce
+key_start => remove_jitter:u23.ce
+key_start => remove_jitter:u22.ce
+key_start => remove_jitter:u21.ce
+key_start => remove_jitter:u20.ce
 key_start => remove_jitter:u19.ce
-key_time => remove_jitter:u20.key_in
-key_select => remove_jitter:u21.key_in
-key_set => remove_jitter:u23.key_in
-key_conform => remove_jitter:u22.key_in
-key_price => remove_jitter:u24.key_in
-clk => setprice:u28.clk
-clk => set_price:u27.clk
-clk => settime:u26.clk
-clk => SetInit:u25.clk
-clk => remove_jitter:u24.clk
+key_start => displayprice:u18.ce
+key_start => separateprice:u17.ce
+key_start => or2total:u16.ce
+key_start => unit_price:u15.st
+key_start => starting_price:u14.st
+key_start => state_controller:u12.st
+key_start => displaydistance:u11.ce
+key_start => separateprice:u10.ce
+key_start => displaytime:u9.ce
+key_start => separatetime:u8.ce
+key_start => countplus:u7.ce
+key_start => countplus:u6.ce
+key_start => drivetime:u5.ce
+key_start => total_run:u4.ce
+key_start => delay:u3.ce
+key_start => licheng:u2.ce
+key_start => hl:u1.ce
+key_time => remove_jitter:u19.key_in
+key_select => remove_jitter:u20.key_in
+key_set => remove_jitter:u22.key_in
+key_conform => remove_jitter:u21.key_in
+key_price => remove_jitter:u23.key_in
+clk => setprice:u27.clk
+clk => set_price:u26.clk
+clk => settime:u25.clk
+clk => SetInit:u24.clk
 clk => remove_jitter:u23.clk
 clk => remove_jitter:u22.clk
 clk => remove_jitter:u21.clk
@@ -2043,23 +2066,7 @@ key_in => key_out~reg0.ENA
 key_out <= key_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|remove_jitter:u24
-ce => ~NO_FANOUT~
-clk => count[3].CLK
-clk => count[2].CLK
-clk => count[1].CLK
-clk => count[0].CLK
-clk => key_out~reg0.CLK
-load => ~NO_FANOUT~
-key_in => count~7.OUTPUTSELECT
-key_in => count~6.OUTPUTSELECT
-key_in => count~5.OUTPUTSELECT
-key_in => count~4.OUTPUTSELECT
-key_in => key_out~reg0.ENA
-key_out <= key_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|SetInit:u25
+|main|SetInit:u24
 clk => time_sel.CLK
 clk => bit_sel[31].CLK
 clk => bit_sel[30].CLK
@@ -2423,7 +2430,7 @@ min_f[2] <= min_f[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 min_f[3] <= min_f[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|settime:u26
+|main|settime:u25
 ce => ~NO_FANOUT~
 clk => transition[10].CLK
 clk => transition[9].CLK
@@ -2477,7 +2484,7 @@ settime[9] <= settime[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 settime[10] <= settime[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|settime:u26|mult10b:u25_2
+|main|settime:u25|mult10b:u25_2
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -2520,7 +2527,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|settime:u26|mult10b:u25_2|mult4b:u25_1
+|main|settime:u25|mult10b:u25_2|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -2788,7 +2795,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|settime:u26|mult10b:u25_3
+|main|settime:u25|mult10b:u25_3
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -2831,7 +2838,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|settime:u26|mult10b:u25_3|mult4b:u25_1
+|main|settime:u25|mult10b:u25_3|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -3099,7 +3106,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|settime:u26|mult10b:u25_4
+|main|settime:u25|mult10b:u25_4
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -3142,7 +3149,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|settime:u26|mult10b:u25_4|mult4b:u25_1
+|main|settime:u25|mult10b:u25_4|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -3410,7 +3417,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|set_price:u27
+|main|set_price:u26
 clk => price_sel[31].CLK
 clk => price_sel[30].CLK
 clk => price_sel[29].CLK
@@ -4695,7 +4702,7 @@ pricesel[30] <= pricesel[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pricesel[31] <= pricesel[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|setprice:u28
+|main|setprice:u27
 ce => ~NO_FANOUT~
 clk => transition1[13].CLK
 clk => transition1[12].CLK
@@ -5130,7 +5137,7 @@ day_long_distance_price[12] <= day_long_distance_price[12]~reg0.DB_MAX_OUTPUT_PO
 day_long_distance_price[13] <= day_long_distance_price[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|setprice:u28|mult10b:u28_2
+|main|setprice:u27|mult10b:u28_2
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -5173,7 +5180,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_2|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_2|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -5441,7 +5448,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_3
+|main|setprice:u27|mult10b:u28_3
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -5484,7 +5491,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_3|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_3|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -5752,7 +5759,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_4
+|main|setprice:u27|mult10b:u28_4
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -5795,7 +5802,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_4|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_4|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -6063,7 +6070,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_5
+|main|setprice:u27|mult10b:u28_5
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -6106,7 +6113,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_5|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_5|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -6374,7 +6381,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_6
+|main|setprice:u27|mult10b:u28_6
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -6417,7 +6424,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_6|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_6|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -6685,7 +6692,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_7
+|main|setprice:u27|mult10b:u28_7
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -6728,7 +6735,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_7|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_7|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -6996,7 +7003,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_8
+|main|setprice:u27|mult10b:u28_8
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -7039,7 +7046,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_8|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_8|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -7307,7 +7314,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_9
+|main|setprice:u27|mult10b:u28_9
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -7350,7 +7357,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_9|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_9|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -7618,7 +7625,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_10
+|main|setprice:u27|mult10b:u28_10
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -7661,7 +7668,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_10|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_10|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -7929,7 +7936,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_11
+|main|setprice:u27|mult10b:u28_11
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -7972,7 +7979,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_11|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_11|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -8240,7 +8247,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_12
+|main|setprice:u27|mult10b:u28_12
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -8283,7 +8290,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_12|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_12|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -8551,7 +8558,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_13
+|main|setprice:u27|mult10b:u28_13
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -8594,7 +8601,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_13|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_13|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -8862,7 +8869,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_14
+|main|setprice:u27|mult10b:u28_14
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -8905,7 +8912,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_14|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_14|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -9173,7 +9180,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_15
+|main|setprice:u27|mult10b:u28_15
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -9216,7 +9223,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_15|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_15|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -9484,7 +9491,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|setprice:u28|mult10b:u28_16
+|main|setprice:u27|mult10b:u28_16
 d1[0] => mult4b:u25_1.a[1]
 d1[1] => mult4b:u25_1.a[2]
 d1[2] => mult4b:u25_1.a[3]
@@ -9527,7 +9534,7 @@ q[18] <= mult4b:u25_1.r[19]
 q[19] <= mult4b:u25_1.r[20]
 
 
-|main|setprice:u28|mult10b:u28_16|mult4b:u25_1
+|main|setprice:u27|mult10b:u28_16|mult4b:u25_1
 r[1] <= r1~9.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r1~28.DB_MAX_OUTPUT_PORT_TYPE
 r[3] <= r1~46.DB_MAX_OUTPUT_PORT_TYPE
@@ -9795,7 +9802,7 @@ b[10] => r1~135.OUTPUTSELECT
 b[10] => r1~134.OUTPUTSELECT
 
 
-|main|or5price:u29
+|main|or5price:u28
 ce => price[13]~60.IN1
 pricesel[0] => Equal0.IN31
 pricesel[0] => Equal1.IN0
@@ -10043,7 +10050,7 @@ price[12] <= price[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
 price[13] <= price[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|or2time:u30
+|main|or2time:u29
 ce => vffentemp[3].LATCH_ENABLE
 ce => vffentemp[2].LATCH_ENABLE
 ce => vffentemp[1].LATCH_ENABLE

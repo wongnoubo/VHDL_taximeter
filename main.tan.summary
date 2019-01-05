@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.112 ns
+Actual Time    : 20.746 ns
 From           : din
 To             : licheng:u2|twofive[1]
 From Clock     : --
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.292 ns
-From           : displaydistance:u11|outp[0]
-To             : outpdistance[0]
+Actual Time    : 9.605 ns
+From           : displayprice:u18|outp[7]
+To             : outpprice[7]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.677 ns
-From           : key_set
-To             : remove_jitter:u23|key_out
+Actual Time    : 6.325 ns
+From           : key_start
+To             : state_controller:u12|next_state.within_starting_price_142
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,22 +35,42 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.06 MHz ( period = 49.840 ns )
-From           : or2total:u16|total[5]
-To             : separateprice:u17|combb[2]
+Actual Time    : 22.41 MHz ( period = 44.630 ns )
+From           : or2total:u16|total[4]
+To             : separateprice:u17|qian[0]
 From Clock     : clk
 To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'key_start'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 171.17 MHz ( period = 5.842 ns )
+From           : or2time:u29|rsfentemp[0]
+To             : or2time:u29|rsfen[0]
+From Clock     : key_start
+To Clock       : key_start
 Failed Paths   : 0
 
 Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : unit_price:u15|total_price[12]
-To             : or2total:u16|total[12]
+From           : unit_price:u15|total_price[13]
+To             : or2total:u16|total[13]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 454
+Failed Paths   : 480
+
+Type           : Clock Hold: 'key_start'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : or2time:u29|vshtemp[1]
+To             : or2time:u29|rshtemp[1]
+From Clock     : key_start
+To Clock       : key_start
+Failed Paths   : 16
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 454
+Failed Paths   : 496
 
 --------------------------------------------------------------------------------------
 
