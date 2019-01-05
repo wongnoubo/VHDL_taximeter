@@ -83,3 +83,4 @@ set_global_assignment -name VHDL_FILE or5price.vhd
 set_global_assignment -name VHDL_FILE or2time.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE main.vwf
 set_global_assignment -name MISC_FILE "D:/develop/vhdl_projects/VHDL_taxi-main/main.dpf"
+set_global_assignment -name VHDL_FILE bee.vhd

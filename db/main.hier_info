@@ -1,4 +1,5 @@
 |main
+key_start => bee:u30.ce
 key_start => or2time:u29.ce
 key_start => or5price:u28.ce
 key_start => setprice:u27.ce
@@ -54,9 +55,9 @@ clk => total_run:u4.clk
 clk => delay:u3.clk
 clk => licheng:u2.clk
 clk => hl:u1.clk
-din => total_run:u4.din
-din => licheng:u2.din
-din => hl:u1.din
+wheel => total_run:u4.din
+wheel => licheng:u2.din
+wheel => hl:u1.din
 seltime[0] <= displaytime:u9.sel[0]
 seltime[1] <= displaytime:u9.sel[1]
 seltime[2] <= displaytime:u9.sel[2]
@@ -90,6 +91,7 @@ outpprice[4] <= displayprice:u18.outp[4]
 outpprice[5] <= displayprice:u18.outp[5]
 outpprice[6] <= displayprice:u18.outp[6]
 outpprice[7] <= displayprice:u18.outp[7]
+bee_pulse <= bee:u30.bee_pulse
 
 
 |main|hl:u1
@@ -10149,5 +10151,13 @@ rsh[0] <= rsh[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 rsh[1] <= rsh[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 rsh[2] <= rsh[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 rsh[3] <= rsh[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|bee:u30
+ce => bee_pulse$latch.LATCH_ENABLE
+qibu => bee_pulse~1.OUTPUTSELECT
+run_pulse => bee_pulse~0.OUTPUTSELECT
+wait_pulse => bee_pulse~0.DATAA
+bee_pulse <= bee_pulse$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 

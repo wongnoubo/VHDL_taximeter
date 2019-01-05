@@ -30,7 +30,7 @@ process(din,ce)
 	--当没有清零信号输入，程序正常进行
 	if load='0'then
 		--当使能输入为0，程序正常进行
-		if ce='1' then
+		if ce='0' then
 			--输入din为上升沿时，执行下面程序
 			if din'event and din='1' then
 				--判断q是否大于600，也就是是否达到1分钟，q小于600，没达到一分钟

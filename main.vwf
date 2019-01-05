@@ -42,16 +42,6 @@ SIGNAL("clk")
 	PARENT = "";
 }
 
-SIGNAL("din")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("key_conform")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -2272,6 +2262,156 @@ SIGNAL("state_controller:u12|current_state.within_starting_price")
 	PARENT = "";
 }
 
+SIGNAL("drivetime:u5|dout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("countplus:u7|comb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 11;
+	LSB_INDEX = 0;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("countplus:u7|comb[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("countplus:u7|comb[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "countplus:u7|comb";
+}
+
+SIGNAL("wheel")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("bee_pulse")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -2286,42 +2426,6 @@ TRANSITION_LIST("clk")
 			LEVEL 1 FOR 50.0;
 		}
 		LEVEL 0 FOR 50.0;
-	}
-}
-
-TRANSITION_LIST("din")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 10000;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
-		}
-		LEVEL 0 FOR 500050.0;
-		LEVEL 1 FOR 50.0;
-		NODE
-		{
-			REPEAT = 4999;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
-		}
-		NODE
-		{
-			REPEAT = 10;
-			LEVEL 0 FOR 50000.0;
-			LEVEL 1 FOR 50000.0;
-		}
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		NODE
-		{
-			REPEAT = 19999;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
-		}
 	}
 }
 
@@ -4153,6 +4257,159 @@ TRANSITION_LIST("state_controller:u12|current_state.within_starting_price")
 	}
 }
 
+TRANSITION_LIST("drivetime:u5|dout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("countplus:u7|comb[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("wheel")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 10000;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
+		}
+		LEVEL 0 FOR 500050.0;
+		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 4999;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
+		}
+		NODE
+		{
+			REPEAT = 10;
+			LEVEL 0 FOR 50000.0;
+			LEVEL 1 FOR 50000.0;
+		}
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 19999;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
+		}
+	}
+}
+
+TRANSITION_LIST("bee_pulse")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 5000000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clk";
@@ -4164,7 +4421,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "din";
+	CHANNEL = "wheel";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -6369,6 +6626,144 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 223;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "drivetime:u5|dout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 224;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 225;
+	TREE_LEVEL = 0;
+	CHILDREN = 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 226;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 227;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 228;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 229;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 230;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 231;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 232;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 233;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 234;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 235;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "countplus:u7|comb[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 236;
+	TREE_LEVEL = 1;
+	PARENT = 225;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bee_pulse";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 237;
 	TREE_LEVEL = 0;
 }
 

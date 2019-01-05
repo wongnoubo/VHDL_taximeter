@@ -15,7 +15,7 @@ port
 		--声明clk为逻辑输入，作为数据输入
 		clk	: in std_logic;
 		--车轮脉冲一个表示行进2m
-		din:in std_logic;
+		wheel:in std_logic;
 		seltime:out std_logic_vector(2 downto 0);--显示出租车运行总时间的数码管位选
 		--位选
 		outptime:out std_logic_vector(7 downto 0);--显示出租车运行总时间的数码管段选
@@ -23,7 +23,8 @@ port
 		--位选
 		outpdistance:out std_logic_vector(7 downto 0);--显示出租车运行总路程的数码管段选
 		selprice:out std_logic_vector(2 downto 0);--价格段选
-		outpprice:out std_logic_vector(7 downto 0)--价格位选
+		outpprice:out std_logic_vector(7 downto 0);--价格位选
+		bee_pulse : out std_logic--蜂鸣器
 	);
 end entity main;
 architecture one of main is
@@ -361,6 +362,18 @@ architecture one of main is
 		rffen,rsfen,rfh,rsh:out std_logic_vector(3 downto 0)
 		);
 		end component;
+		
+	component bee
+	port
+	(
+		ce : in std_logic;
+		qibu : in std_logic;--起步信号
+		run_pulse : in std_logic;--里程脉冲
+		wait_pulse : in std_logic;--等待时间脉冲
+		bee_pulse : out std_logic--蜂鸣器脉冲
+	);
+--结束主体
+	end component;
 	
 	--内部信号线
 	signal ce0,load0 : std_logic;
@@ -402,10 +415,10 @@ architecture one of main is
 	signal timeselnet : std_logic;--价格设置标志位
 	signal net30,net31,net32,net33: std_logic_vector(3 downto 0);
 	begin 
-	u1 : hl port map(ce=>key_start,load=>load0,clk=>clk,din=>din,ceout=>net1);--判断是高速行驶还是低速行驶
-	u2 : licheng port map(ce=>key_start,load=>load0,clk=>clk,din=>din,cein=>net1,dp=>net2,qibu=>net3,yuancheng=>net4);--用于里程计价的里程数
+	u1 : hl port map(ce=>key_start,load=>load0,clk=>clk,din=>wheel,ceout=>net1);--判断是高速行驶还是低速行驶
+	u2 : licheng port map(ce=>key_start,load=>load0,clk=>clk,din=>wheel,cein=>net1,dp=>net2,qibu=>net3,yuancheng=>net4);--用于里程计价的里程数
 	u3 : delay port map(ce=>key_start,load=>load0,clk=>clk,cein=>net1,ceout=>net5,tenout=>net6);--用于计时计价的分钟数
-	u4 : total_run port map(ce=>key_start,load=>load0,clk=>clk,din=>din,dp_total=>net7);--出租车启动后运行的里程数
+	u4 : total_run port map(ce=>key_start,load=>load0,clk=>clk,din=>wheel,dp_total=>net7);--出租车启动后运行的里程数
 	u5 : drivetime port map(ce=>key_start,load=>load0,din=>clk,dout=>net8,tenout=>net9);--出租车启动后运行的分钟数
 	u6 : countplus port map(ce=>key_start,load=>load0,din=>net7,total=>net10);--出租车启动后运行的里程数总数
 	u7 : countplus port map(ce=>key_start,load=>load0,din=>net8,total=>net11);--出租车启动后运行的分钟数总数
@@ -432,4 +445,5 @@ architecture one of main is
 	u27 : setprice port map(clk=>clk,ce=>key_start,load=>load0,price_state=>key_pricenet,day_starting_price_j=>day_starting_pricenet_j,day_starting_price_y=>day_starting_pricenet_y,day_starting_price_t=>day_starting_pricenet_t,day_starting_price_h=>day_starting_pricenet_h,night_starting_price_j=>night_starting_pricenet_j,night_starting_price_y=>night_starting_pricenet_y,night_starting_price_t=>night_starting_pricenet_t,night_starting_price_h=>night_starting_pricenet_h,day_mileage_price_j=>day_mileage_pricenet_j,day_mileage_price_y=>day_mileage_pricenet_y,day_mileage_price_t=>day_mileage_pricenet_t,day_mileage_price_h=>day_mileage_pricenet_h,day_timing_price_j=>day_timing_pricenet_j,day_timing_price_y=>day_timing_pricenet_y,day_timing_price_t=>day_timing_pricenet_t,day_timing_price_h=>day_timing_pricenet_h,day_long_distance_price_j=>day_long_distance_pricenet_j,day_long_distance_price_y=>day_long_distance_pricenet_y,day_long_distance_price_t=>day_long_distance_pricenet_t,day_long_distance_price_h=>day_long_distance_pricenet_h,day_starting_price=>day_starting_pricenet,night_starting_price =>night_starting_pricenet,day_mileage_price=>day_mileage_pricenet,day_timing_price=>day_timing_pricenet,day_long_distance_price=>day_long_distance_pricenet);
 	u28 : or5price port map(ce=>key_start,pricesel=>priceselnet,day_starting_price=>day_starting_pricenet,night_starting_price=>night_starting_pricenet, day_mileage_price=>day_mileage_pricenet,day_timing_price=>day_timing_pricenet,day_long_distance_price=>day_long_distance_pricenet,price=>pricenet);--设置价格五选一,用于数码管显示
 	u29 : or2time port map(ce=>key_start,timesel=>timeselnet,ffen=>net12,sfen=>net13,fh=>net14,sh=>net15,vffen=>min_fnet,vsfen=>min_snet,vfh=>hour_fnet,vsh=>hour_snet,rffen=>net30,rsfen=>net31,rfh=>net32,rsh=>net33);
+	u30 : bee port map(ce=>key_start,wait_pulse=>net5,run_pulse=>net2,bee_pulse=>bee_pulse,qibu=>net3);
 end architecture one;
