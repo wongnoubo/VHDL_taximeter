@@ -1,0 +1,73 @@
+--调用各个头文件
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+--开始主体
+entity time is
+	port
+	(
+	--声明din为逻辑输入，作用是输入时钟信号
+	--声明ce为逻辑输入，作用是使能，输入0时有效
+	--声明load为逻辑输入，作用是清零
+	din,ce,load	: in std_logic;
+	--每分钟 dout='1'
+	dout	: out std_logic;
+	--十分钟 tenout='1'
+	tenout : out std_logic
+	);
+--结束主体
+end time;
+--声明构造体one
+architecture one of time is
+begin
+--声明进程
+process(din,ce)
+	--声明一个10位变量q
+	variable q:std_logic_vector(9 downto 0);
+	--10mins脉冲
+	variable ten:std_logic_vector(3 downto 0);
+	begin
+	--当没有清零信号输入，程序正常进行
+	if load='0'then
+		--当使能输入为0，程序正常进行
+		if ce='0' then
+			--输入din为上升沿时，执行下面程序
+			if din'event and din='1' then
+				--判断q是否大于600，也就是是否达到1分钟，q小于600，没达到一分钟
+				if q<600 then
+					--q加一
+					q:=q+1;
+				--达到一分钟
+				else 
+					--q清零
+					q:=(others=>'0');
+				end if;
+				--判断q的数值是否等于600，也就是是否达到1分钟，q等于600，达到1分钟
+				if q="1001011000" then 
+					ten:=ten+1;
+				--输出一个脉冲
+					dout<='1';
+				--没达到一分钟
+				else
+				--不输出脉冲
+					dout<='0';
+				end if;
+				if ten < 10 then
+					tenout<='0';
+				else
+					tenout<='1';
+					ten:="1011";
+				end if;
+			end if;
+		end if;	
+	--有清零信号
+	else
+	--数值清零
+		q:=(others=>'0');
+		ten:=(others=>'0');
+		tenout<='0';
+	end if;
+	--结束进程
+	end process;
+--结束构造体
+end one;

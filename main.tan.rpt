@@ -1,0 +1,974 @@
+Classic Timing Analyzer report for main
+Sat Jan 05 14:58:33 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. Clock Hold: 'clk'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                         ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+----------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                           ; To                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 20.112 ns                        ; din                            ; licheng:u2|twofive[1]      ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 10.292 ns                        ; displaydistance:u11|outp[0]    ; outpdistance[0]            ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -3.677 ns                        ; key_set                        ; remove_jitter:u23|key_out  ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A                                      ; None          ; 20.06 MHz ( period = 49.840 ns ) ; or2total:u16|total[5]          ; separateprice:u17|combb[2] ; clk        ; clk      ; 0            ;
+; Clock Hold: 'clk'            ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; unit_price:u15|total_price[12] ; or2total:u16|total[12]     ; clk        ; clk      ; 454          ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                ;                            ;            ;          ; 454          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+----------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1C20F400C8       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                   ; To                         ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 20.06 MHz ( period = 49.840 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.661 ns                ;
+; N/A                                     ; 20.06 MHz ( period = 49.840 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.661 ns                ;
+; N/A                                     ; 20.06 MHz ( period = 49.840 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.661 ns                ;
+; N/A                                     ; 20.06 MHz ( period = 49.840 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.661 ns                ;
+; N/A                                     ; 20.09 MHz ( period = 49.776 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.634 ns                ;
+; N/A                                     ; 20.09 MHz ( period = 49.776 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.634 ns                ;
+; N/A                                     ; 20.09 MHz ( period = 49.776 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.634 ns                ;
+; N/A                                     ; 20.09 MHz ( period = 49.776 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.634 ns                ;
+; N/A                                     ; 20.12 MHz ( period = 49.704 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.562 ns                ;
+; N/A                                     ; 20.12 MHz ( period = 49.704 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.562 ns                ;
+; N/A                                     ; 20.12 MHz ( period = 49.704 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.562 ns                ;
+; N/A                                     ; 20.12 MHz ( period = 49.704 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.562 ns                ;
+; N/A                                     ; 20.26 MHz ( period = 49.348 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.384 ns                ;
+; N/A                                     ; 20.26 MHz ( period = 49.348 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.384 ns                ;
+; N/A                                     ; 20.26 MHz ( period = 49.348 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.384 ns                ;
+; N/A                                     ; 20.26 MHz ( period = 49.348 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.384 ns                ;
+; N/A                                     ; 20.29 MHz ( period = 49.282 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.370 ns                ;
+; N/A                                     ; 20.29 MHz ( period = 49.282 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.370 ns                ;
+; N/A                                     ; 20.29 MHz ( period = 49.282 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.370 ns                ;
+; N/A                                     ; 20.29 MHz ( period = 49.282 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.370 ns                ;
+; N/A                                     ; 20.35 MHz ( period = 49.150 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.210 ns                ;
+; N/A                                     ; 20.35 MHz ( period = 49.150 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.210 ns                ;
+; N/A                                     ; 20.35 MHz ( period = 49.150 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.210 ns                ;
+; N/A                                     ; 20.35 MHz ( period = 49.150 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.210 ns                ;
+; N/A                                     ; 20.38 MHz ( period = 49.056 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.241 ns                ;
+; N/A                                     ; 20.38 MHz ( period = 49.056 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.241 ns                ;
+; N/A                                     ; 20.38 MHz ( period = 49.056 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.241 ns                ;
+; N/A                                     ; 20.38 MHz ( period = 49.056 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.241 ns                ;
+; N/A                                     ; 20.40 MHz ( period = 49.028 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.188 ns                ;
+; N/A                                     ; 20.40 MHz ( period = 49.028 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.188 ns                ;
+; N/A                                     ; 20.40 MHz ( period = 49.028 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.188 ns                ;
+; N/A                                     ; 20.40 MHz ( period = 49.028 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.188 ns                ;
+; N/A                                     ; 20.45 MHz ( period = 48.894 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.083 ns                ;
+; N/A                                     ; 20.45 MHz ( period = 48.894 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.083 ns                ;
+; N/A                                     ; 20.45 MHz ( period = 48.894 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.083 ns                ;
+; N/A                                     ; 20.45 MHz ( period = 48.894 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.083 ns                ;
+; N/A                                     ; 20.46 MHz ( period = 48.870 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 20.46 MHz ( period = 48.870 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 20.46 MHz ( period = 48.870 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 20.46 MHz ( period = 48.870 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 20.48 MHz ( period = 48.838 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.092 ns                ;
+; N/A                                     ; 20.48 MHz ( period = 48.838 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.092 ns                ;
+; N/A                                     ; 20.48 MHz ( period = 48.838 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.092 ns                ;
+; N/A                                     ; 20.48 MHz ( period = 48.838 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.092 ns                ;
+; N/A                                     ; 20.57 MHz ( period = 48.606 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 6.044 ns                ;
+; N/A                                     ; 20.60 MHz ( period = 48.542 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 6.017 ns                ;
+; N/A                                     ; 20.61 MHz ( period = 48.524 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 6.030 ns                ;
+; N/A                                     ; 20.61 MHz ( period = 48.524 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 6.030 ns                ;
+; N/A                                     ; 20.61 MHz ( period = 48.524 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 6.030 ns                ;
+; N/A                                     ; 20.61 MHz ( period = 48.524 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 6.030 ns                ;
+; N/A                                     ; 20.63 MHz ( period = 48.470 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.945 ns                ;
+; N/A                                     ; 20.67 MHz ( period = 48.370 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 5.953 ns                ;
+; N/A                                     ; 20.67 MHz ( period = 48.370 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 5.953 ns                ;
+; N/A                                     ; 20.67 MHz ( period = 48.370 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 5.953 ns                ;
+; N/A                                     ; 20.67 MHz ( period = 48.370 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 5.953 ns                ;
+; N/A                                     ; 20.78 MHz ( period = 48.114 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.767 ns                ;
+; N/A                                     ; 20.81 MHz ( period = 48.048 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.753 ns                ;
+; N/A                                     ; 20.87 MHz ( period = 47.916 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.593 ns                ;
+; N/A                                     ; 20.87 MHz ( period = 47.908 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.758 ns                ;
+; N/A                                     ; 20.87 MHz ( period = 47.908 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.758 ns                ;
+; N/A                                     ; 20.88 MHz ( period = 47.902 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.755 ns                ;
+; N/A                                     ; 20.90 MHz ( period = 47.844 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.731 ns                ;
+; N/A                                     ; 20.90 MHz ( period = 47.844 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.731 ns                ;
+; N/A                                     ; 20.90 MHz ( period = 47.838 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.728 ns                ;
+; N/A                                     ; 20.91 MHz ( period = 47.822 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.624 ns                ;
+; N/A                                     ; 20.92 MHz ( period = 47.794 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.571 ns                ;
+; N/A                                     ; 20.93 MHz ( period = 47.772 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.659 ns                ;
+; N/A                                     ; 20.93 MHz ( period = 47.772 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.659 ns                ;
+; N/A                                     ; 20.94 MHz ( period = 47.766 ns )                    ; or2total:u16|total[11] ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.656 ns                ;
+; N/A                                     ; 20.98 MHz ( period = 47.660 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.466 ns                ;
+; N/A                                     ; 20.99 MHz ( period = 47.636 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.452 ns                ;
+; N/A                                     ; 21.01 MHz ( period = 47.604 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.475 ns                ;
+; N/A                                     ; 21.03 MHz ( period = 47.550 ns )                    ; or2total:u16|total[13] ; separateprice:u17|combb[3] ; clk        ; clk      ; None                        ; None                      ; 5.312 ns                ;
+; N/A                                     ; 21.03 MHz ( period = 47.550 ns )                    ; or2total:u16|total[13] ; separateprice:u17|combb[1] ; clk        ; clk      ; None                        ; None                      ; 5.312 ns                ;
+; N/A                                     ; 21.03 MHz ( period = 47.550 ns )                    ; or2total:u16|total[13] ; separateprice:u17|combb[0] ; clk        ; clk      ; None                        ; None                      ; 5.312 ns                ;
+; N/A                                     ; 21.03 MHz ( period = 47.550 ns )                    ; or2total:u16|total[13] ; separateprice:u17|combb[2] ; clk        ; clk      ; None                        ; None                      ; 5.312 ns                ;
+; N/A                                     ; 21.09 MHz ( period = 47.416 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.481 ns                ;
+; N/A                                     ; 21.09 MHz ( period = 47.416 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.481 ns                ;
+; N/A                                     ; 21.09 MHz ( period = 47.410 ns )                    ; or2total:u16|total[10] ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.478 ns                ;
+; N/A                                     ; 21.12 MHz ( period = 47.350 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.467 ns                ;
+; N/A                                     ; 21.12 MHz ( period = 47.350 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.467 ns                ;
+; N/A                                     ; 21.12 MHz ( period = 47.344 ns )                    ; or2total:u16|total[12] ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.464 ns                ;
+; N/A                                     ; 21.15 MHz ( period = 47.290 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.413 ns                ;
+; N/A                                     ; 21.18 MHz ( period = 47.218 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.307 ns                ;
+; N/A                                     ; 21.18 MHz ( period = 47.218 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.307 ns                ;
+; N/A                                     ; 21.18 MHz ( period = 47.212 ns )                    ; or2total:u16|total[0]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.304 ns                ;
+; N/A                                     ; 21.22 MHz ( period = 47.136 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combd[0] ; clk        ; clk      ; None                        ; None                      ; 5.336 ns                ;
+; N/A                                     ; 21.22 MHz ( period = 47.124 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.338 ns                ;
+; N/A                                     ; 21.22 MHz ( period = 47.124 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.338 ns                ;
+; N/A                                     ; 21.22 MHz ( period = 47.118 ns )                    ; or2total:u16|total[3]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.335 ns                ;
+; N/A                                     ; 21.23 MHz ( period = 47.096 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.285 ns                ;
+; N/A                                     ; 21.23 MHz ( period = 47.096 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.285 ns                ;
+; N/A                                     ; 21.24 MHz ( period = 47.090 ns )                    ; or2total:u16|total[4]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.282 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|shi[3]   ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|qian[3]  ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|bai[3]   ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|ge[1]    ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|qian[1]  ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|ge[2]    ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.972 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|qian[2]  ; clk        ; clk      ; None                        ; None                      ; 5.290 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.962 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.29 MHz ( period = 46.962 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.956 ns )                    ; or2total:u16|total[1]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.177 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.950 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|shi[0]   ; clk        ; clk      ; None                        ; None                      ; 5.279 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.950 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|qian[0]  ; clk        ; clk      ; None                        ; None                      ; 5.279 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.950 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|ge[3]    ; clk        ; clk      ; None                        ; None                      ; 5.279 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.950 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|ge[0]    ; clk        ; clk      ; None                        ; None                      ; 5.279 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.950 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|bai[0]   ; clk        ; clk      ; None                        ; None                      ; 5.279 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comba[2] ; clk        ; clk      ; None                        ; None                      ; 5.273 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comba[3] ; clk        ; clk      ; None                        ; None                      ; 5.273 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comba[0] ; clk        ; clk      ; None                        ; None                      ; 5.273 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comba[1] ; clk        ; clk      ; None                        ; None                      ; 5.273 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.166 ns                ;
+; N/A                                     ; 21.30 MHz ( period = 46.938 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.166 ns                ;
+; N/A                                     ; 21.31 MHz ( period = 46.932 ns )                    ; or2total:u16|total[2]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.163 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|shi[3]   ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|qian[3]  ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|bai[3]   ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|ge[1]    ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|qian[1]  ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|ge[2]    ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.908 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|qian[2]  ; clk        ; clk      ; None                        ; None                      ; 5.263 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.906 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.189 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.906 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.189 ns                ;
+; N/A                                     ; 21.32 MHz ( period = 46.900 ns )                    ; or2total:u16|total[6]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.186 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.886 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|shi[0]   ; clk        ; clk      ; None                        ; None                      ; 5.252 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.886 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|qian[0]  ; clk        ; clk      ; None                        ; None                      ; 5.252 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.886 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|ge[3]    ; clk        ; clk      ; None                        ; None                      ; 5.252 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.886 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|ge[0]    ; clk        ; clk      ; None                        ; None                      ; 5.252 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.886 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|bai[0]   ; clk        ; clk      ; None                        ; None                      ; 5.252 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.874 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comba[2] ; clk        ; clk      ; None                        ; None                      ; 5.246 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.874 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comba[3] ; clk        ; clk      ; None                        ; None                      ; 5.246 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.874 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comba[0] ; clk        ; clk      ; None                        ; None                      ; 5.246 ns                ;
+; N/A                                     ; 21.33 MHz ( period = 46.874 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comba[1] ; clk        ; clk      ; None                        ; None                      ; 5.246 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|shi[3]   ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|qian[3]  ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|bai[3]   ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|ge[1]    ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|qian[1]  ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|ge[2]    ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.35 MHz ( period = 46.836 ns )                    ; or2total:u16|total[11] ; separateprice:u17|qian[2]  ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 21.36 MHz ( period = 46.814 ns )                    ; or2total:u16|total[11] ; separateprice:u17|shi[0]   ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.36 MHz ( period = 46.814 ns )                    ; or2total:u16|total[11] ; separateprice:u17|qian[0]  ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.36 MHz ( period = 46.814 ns )                    ; or2total:u16|total[11] ; separateprice:u17|ge[3]    ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.36 MHz ( period = 46.814 ns )                    ; or2total:u16|total[11] ; separateprice:u17|ge[0]    ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.36 MHz ( period = 46.814 ns )                    ; or2total:u16|total[11] ; separateprice:u17|bai[0]   ; clk        ; clk      ; None                        ; None                      ; 5.180 ns                ;
+; N/A                                     ; 21.37 MHz ( period = 46.802 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comba[2] ; clk        ; clk      ; None                        ; None                      ; 5.174 ns                ;
+; N/A                                     ; 21.37 MHz ( period = 46.802 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comba[3] ; clk        ; clk      ; None                        ; None                      ; 5.174 ns                ;
+; N/A                                     ; 21.37 MHz ( period = 46.802 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comba[0] ; clk        ; clk      ; None                        ; None                      ; 5.174 ns                ;
+; N/A                                     ; 21.37 MHz ( period = 46.802 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comba[1] ; clk        ; clk      ; None                        ; None                      ; 5.174 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[6]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[1]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[5]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[4]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[3]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[2]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.44 MHz ( period = 46.642 ns )                    ; or2total:u16|total[5]  ; separateprice:u17|comb[0]  ; clk        ; clk      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 21.46 MHz ( period = 46.592 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.127 ns                ;
+; N/A                                     ; 21.46 MHz ( period = 46.592 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.127 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.586 ns )                    ; or2total:u16|total[8]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.124 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[6]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[1]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[5]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[4]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[3]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[2]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.47 MHz ( period = 46.578 ns )                    ; or2total:u16|total[7]  ; separateprice:u17|comb[0]  ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[6]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[1]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[5]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[4]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[3]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[2]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.50 MHz ( period = 46.506 ns )                    ; or2total:u16|total[11] ; separateprice:u17|comb[0]  ; clk        ; clk      ; None                        ; None                      ; 5.065 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|shi[3]   ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|qian[3]  ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|bai[3]   ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|ge[1]    ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|qian[1]  ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|ge[2]    ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.51 MHz ( period = 46.480 ns )                    ; or2total:u16|total[10] ; separateprice:u17|qian[2]  ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 21.52 MHz ( period = 46.458 ns )                    ; or2total:u16|total[10] ; separateprice:u17|shi[0]   ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 21.52 MHz ( period = 46.458 ns )                    ; or2total:u16|total[10] ; separateprice:u17|qian[0]  ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 21.52 MHz ( period = 46.458 ns )                    ; or2total:u16|total[10] ; separateprice:u17|ge[3]    ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 21.52 MHz ( period = 46.458 ns )                    ; or2total:u16|total[10] ; separateprice:u17|ge[0]    ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 21.52 MHz ( period = 46.458 ns )                    ; or2total:u16|total[10] ; separateprice:u17|bai[0]   ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.446 ns )                    ; or2total:u16|total[10] ; separateprice:u17|comba[2] ; clk        ; clk      ; None                        ; None                      ; 4.996 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.446 ns )                    ; or2total:u16|total[10] ; separateprice:u17|comba[3] ; clk        ; clk      ; None                        ; None                      ; 4.996 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.446 ns )                    ; or2total:u16|total[10] ; separateprice:u17|comba[0] ; clk        ; clk      ; None                        ; None                      ; 4.996 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.446 ns )                    ; or2total:u16|total[10] ; separateprice:u17|comba[1] ; clk        ; clk      ; None                        ; None                      ; 4.996 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.438 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combd[3] ; clk        ; clk      ; None                        ; None                      ; 5.050 ns                ;
+; N/A                                     ; 21.53 MHz ( period = 46.438 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combd[2] ; clk        ; clk      ; None                        ; None                      ; 5.050 ns                ;
+; N/A                                     ; 21.54 MHz ( period = 46.432 ns )                    ; or2total:u16|total[9]  ; separateprice:u17|combd[1] ; clk        ; clk      ; None                        ; None                      ; 5.047 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|shi[3]   ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|qian[3]  ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|bai[3]   ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|ge[1]    ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|qian[1]  ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|ge[2]    ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 21.55 MHz ( period = 46.414 ns )                    ; or2total:u16|total[12] ; separateprice:u17|qian[2]  ; clk        ; clk      ; None                        ; None                      ; 4.999 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                        ;                            ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk'                                                                                                                                                                                                                                                            ;
++------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                     ; To                                                        ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 1.809 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 2.018 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[3]                            ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 2.462 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[13]                           ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 2.705 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 2.630 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 2.698 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 2.752 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 2.996 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 3.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[4]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 3.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 3.304 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[8]                                     ; clk        ; clk      ; None                       ; None                       ; 3.199 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[6]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 3.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[5]                            ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 3.863 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 7.344 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 7.474 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 7.424 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 7.462 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 7.452 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 7.554 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 7.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 7.542 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 7.582 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 7.570 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 7.609 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 7.596 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 7.679 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 7.707 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 7.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 7.740 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 7.676 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 7.717 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 7.704 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 7.820 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 7.933 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 7.848 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 7.834 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 8.013 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 7.786 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 8.041 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 7.914 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 7.866 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 7.919 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 7.942 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 7.894 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 8.049 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 8.106 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 8.037 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 8.174 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 8.186 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 8.214 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 8.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 8.171 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[3]                                    ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 2.421 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 8.204 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 8.315 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[8]                                     ; clk        ; clk      ; None                       ; None                       ; 8.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 8.284 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 8.508 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 8.312 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[8]                                     ; clk        ; clk      ; None                       ; None                       ; 8.299 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[8]                                     ; clk        ; clk      ; None                       ; None                       ; 8.327 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 8.409 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 8.361 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[1]                                ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 8.434 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[2]                                ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 8.514 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 8.542 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 8.681 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[2]                                    ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 3.297 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 8.779 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[8]                                     ; clk        ; clk      ; None                       ; None                       ; 8.794 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[0]                                    ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 3.480 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[31]                               ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 9.009 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[1]                                    ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 3.616 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[6]                                    ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 3.722 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[6]                       ; or5price:u29|price[6]                                     ; clk        ; clk      ; None                       ; None                       ; 1.820 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[4]                                    ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 3.773 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[3]                       ; or5price:u29|price[3]                                     ; clk        ; clk      ; None                       ; None                       ; 1.988 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[7]                                    ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 4.007 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[6]                     ; or5price:u29|price[6]                                     ; clk        ; clk      ; None                       ; None                       ; 2.359 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_timing_price[6]                         ; or5price:u29|price[6]                                     ; clk        ; clk      ; None                       ; None                       ; 2.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; or5price:u29|price[5]                                    ; or2total:u16|total[5]                                     ; clk        ; clk      ; None                       ; None                       ; 4.574 ns                 ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.within_starting_price ; state_controller:u12|next_state.within_starting_price_142 ; clk        ; clk      ; None                       ; None                       ; 1.696 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[7]                       ; or5price:u29|price[7]                                     ; clk        ; clk      ; None                       ; None                       ; 3.024 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[5]                       ; or5price:u29|price[5]                                     ; clk        ; clk      ; None                       ; None                       ; 3.066 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[3]                     ; or5price:u29|price[3]                                     ; clk        ; clk      ; None                       ; None                       ; 3.013 ns                 ;
+; Not operational: Clock Skew > Data Delay ; licheng:u2|twofive[2]                                    ; state_controller:u12|next_state.within_starting_price_142 ; clk        ; clk      ; None                       ; None                       ; 1.922 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[0]                       ; or5price:u29|price[0]                                     ; clk        ; clk      ; None                       ; None                       ; 2.962 ns                 ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.within_starting_price ; state_controller:u12|next_state.beyond_starting_price_123 ; clk        ; clk      ; None                       ; None                       ; 2.124 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[4]                       ; or5price:u29|price[4]                                     ; clk        ; clk      ; None                       ; None                       ; 3.392 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[1]                       ; or5price:u29|price[1]                                     ; clk        ; clk      ; None                       ; None                       ; 3.119 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_starting_price[2]                       ; or5price:u29|price[2]                                     ; clk        ; clk      ; None                       ; None                       ; 3.187 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[3]                        ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 3.854 ns                 ;
+; Not operational: Clock Skew > Data Delay ; delay:u3|tenout                                          ; state_controller:u12|next_state.beyond_starting_price_123 ; clk        ; clk      ; None                       ; None                       ; 2.354 ns                 ;
+; Not operational: Clock Skew > Data Delay ; delay:u3|tenout                                          ; state_controller:u12|next_state.within_starting_price_142 ; clk        ; clk      ; None                       ; None                       ; 2.358 ns                 ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.within_starting_price ; state_controller:u12|next_state.stop_161                  ; clk        ; clk      ; None                       ; None                       ; 2.585 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[7]                        ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 4.033 ns                 ;
+; Not operational: Clock Skew > Data Delay ; licheng:u2|twofive[2]                                    ; state_controller:u12|next_state.beyond_starting_price_123 ; clk        ; clk      ; None                       ; None                       ; 2.641 ns                 ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.start_reset           ; state_controller:u12|next_state.within_starting_price_142 ; clk        ; clk      ; None                       ; None                       ; 2.650 ns                 ;
+; Not operational: Clock Skew > Data Delay ; licheng:u2|twofive[2]                                    ; state_controller:u12|next_state.stop_161                  ; clk        ; clk      ; None                       ; None                       ; 2.827 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[5]                     ; or5price:u29|price[5]                                     ; clk        ; clk      ; None                       ; None                       ; 4.066 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[4]                     ; or5price:u29|price[4]                                     ; clk        ; clk      ; None                       ; None                       ; 4.115 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[2]                        ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 4.754 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_mileage_price[6]                        ; or5price:u29|price[6]                                     ; clk        ; clk      ; None                       ; None                       ; 4.138 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[0]                     ; or5price:u29|price[0]                                     ; clk        ; clk      ; None                       ; None                       ; 3.922 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_mileage_price[5]                        ; or5price:u29|price[5]                                     ; clk        ; clk      ; None                       ; None                       ; 4.231 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_timing_price[4]                         ; or5price:u29|price[4]                                     ; clk        ; clk      ; None                       ; None                       ; 4.281 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_long_distance_price[5]                  ; or5price:u29|price[5]                                     ; clk        ; clk      ; None                       ; None                       ; 4.357 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_long_distance_price[6]                  ; or5price:u29|price[6]                                     ; clk        ; clk      ; None                       ; None                       ; 4.322 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[2]                     ; or5price:u29|price[2]                                     ; clk        ; clk      ; None                       ; None                       ; 4.087 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|night_starting_price[1]                     ; or5price:u29|price[1]                                     ; clk        ; clk      ; None                       ; None                       ; 4.092 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_timing_price[0]                         ; or5price:u29|price[0]                                     ; clk        ; clk      ; None                       ; None                       ; 4.100 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[0]                        ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 4.794 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[1]                        ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 4.815 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[4]                        ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 5.000 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_timing_price[2]                         ; or5price:u29|price[2]                                     ; clk        ; clk      ; None                       ; None                       ; 4.212 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.019 ns                ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_mileage_price[3]                        ; or5price:u29|price[3]                                     ; clk        ; clk      ; None                       ; None                       ; 4.527 ns                 ;
+; Not operational: Clock Skew > Data Delay ; starting_price:u14|total_price[6]                        ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 4.950 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.149 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.137 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.274 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.284 ns                ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.stop                  ; state_controller:u12|next_state.start_reset_180           ; clk        ; clk      ; None                       ; None                       ; 1.192 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.345 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.333 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 12.415 ns                ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[7]                                     ; clk        ; clk      ; None                       ; None                       ; 4.914 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.470 ns                ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.beyond_starting_price ; state_controller:u12|next_state.stop_161                  ; clk        ; clk      ; None                       ; None                       ; 3.839 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.414 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 12.608 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.480 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.428 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.544 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 12.509 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 12.461 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.558 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 12.526 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.532 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.514 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 12.611 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.546 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.669 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.644 ns                ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[1]                                     ; clk        ; clk      ; None                       ; None                       ; 4.880 ns                 ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[2]                                     ; clk        ; clk      ; None                       ; None                       ; 4.884 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 12.804 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.632 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.679 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.624 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.693 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.654 ns                ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[0]                                     ; clk        ; clk      ; None                       ; None                       ; 4.940 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.769 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 12.705 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 12.781 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 12.657 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.754 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 12.722 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 12.810 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.779 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.742 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.784 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 12.824 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.742 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[12]                                    ; clk        ; clk      ; None                       ; None                       ; 12.744 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.879 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 13.003 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.909 ns                ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[5]                                     ; clk        ; clk      ; None                       ; None                       ; 5.401 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 12.910 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.872 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[4]                                     ; clk        ; clk      ; None                       ; None                       ; 12.874 ns                ;
+; Not operational: Clock Skew > Data Delay ; set_price:u27|pricesel[0]                                ; or5price:u29|price[4]                                     ; clk        ; clk      ; None                       ; None                       ; 5.405 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_mileage_price[1]                        ; or5price:u29|price[1]                                     ; clk        ; clk      ; None                       ; None                       ; 5.039 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 13.017 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[1]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.889 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.860 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[10]                                    ; clk        ; clk      ; None                       ; None                       ; 12.862 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 12.919 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[12]                           ; or2total:u16|total[2]                                     ; clk        ; clk      ; None                       ; None                       ; 12.977 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 12.856 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[8]                            ; or2total:u16|total[7]                                     ; clk        ; clk      ; None                       ; None                       ; 12.879 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 12.918 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[11]                           ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 12.921 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.997 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[0]                                     ; clk        ; clk      ; None                       ; None                       ; 12.999 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[13]                                    ; clk        ; clk      ; None                       ; None                       ; 13.103 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[9]                                     ; clk        ; clk      ; None                       ; None                       ; 12.870 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[0]                            ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 12.935 ns                ;
+; Not operational: Clock Skew > Data Delay ; state_controller:u12|current_state.beyond_starting_price ; state_controller:u12|next_state.beyond_starting_price_123 ; clk        ; clk      ; None                       ; None                       ; 4.229 ns                 ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_long_distance_price[0]                  ; or5price:u29|price[0]                                     ; clk        ; clk      ; None                       ; None                       ; 5.168 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[2]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 13.007 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[7]                            ; or2total:u16|total[6]                                     ; clk        ; clk      ; None                       ; None                       ; 13.009 ns                ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[10]                           ; or2total:u16|total[1]                                     ; clk        ; clk      ; None                       ; None                       ; 13.050 ns                ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_long_distance_price[1]                  ; or5price:u29|price[1]                                     ; clk        ; clk      ; None                       ; None                       ; 5.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[11]                                    ; clk        ; clk      ; None                       ; None                       ; 13.004 ns                ;
+; Not operational: Clock Skew > Data Delay ; setprice:u28|day_long_distance_price[3]                  ; or5price:u29|price[3]                                     ; clk        ; clk      ; None                       ; None                       ; 5.510 ns                 ;
+; Not operational: Clock Skew > Data Delay ; unit_price:u15|total_price[9]                            ; or2total:u16|total[3]                                     ; clk        ; clk      ; None                       ; None                       ; 13.021 ns                ;
+; Timing analysis restricted to 200 rows.  ; To change the limit use Settings (Assignments menu)      ;                                                           ;            ;          ;                            ;                            ;                          ;
++------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; tsu                                                                                     ;
++-------+--------------+------------+-------------+----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From        ; To                         ; To Clock ;
++-------+--------------+------------+-------------+----------------------------+----------+
+; N/A   ; None         ; 20.112 ns  ; din         ; licheng:u2|twofive[0]      ; clk      ;
+; N/A   ; None         ; 20.112 ns  ; din         ; licheng:u2|twofive[1]      ; clk      ;
+; N/A   ; None         ; 19.922 ns  ; din         ; licheng:u2|twenty[1]       ; clk      ;
+; N/A   ; None         ; 19.922 ns  ; din         ; licheng:u2|twenty[0]       ; clk      ;
+; N/A   ; None         ; 17.581 ns  ; din         ; licheng:u2|yuancheng       ; clk      ;
+; N/A   ; None         ; 17.490 ns  ; din         ; licheng:u2|twenty[2]       ; clk      ;
+; N/A   ; None         ; 17.046 ns  ; din         ; licheng:u2|run[3]          ; clk      ;
+; N/A   ; None         ; 16.769 ns  ; din         ; licheng:u2|run[2]          ; clk      ;
+; N/A   ; None         ; 16.769 ns  ; din         ; licheng:u2|run[8]          ; clk      ;
+; N/A   ; None         ; 16.765 ns  ; din         ; licheng:u2|run[7]          ; clk      ;
+; N/A   ; None         ; 16.764 ns  ; din         ; licheng:u2|run[12]         ; clk      ;
+; N/A   ; None         ; 16.712 ns  ; din         ; licheng:u2|twofive[2]      ; clk      ;
+; N/A   ; None         ; 16.573 ns  ; din         ; licheng:u2|twenty[3]       ; clk      ;
+; N/A   ; None         ; 16.542 ns  ; din         ; licheng:u2|run[11]         ; clk      ;
+; N/A   ; None         ; 16.541 ns  ; din         ; licheng:u2|run[9]          ; clk      ;
+; N/A   ; None         ; 15.838 ns  ; din         ; licheng:u2|run[1]          ; clk      ;
+; N/A   ; None         ; 15.561 ns  ; din         ; licheng:u2|run[10]         ; clk      ;
+; N/A   ; None         ; 15.334 ns  ; din         ; licheng:u2|dp              ; clk      ;
+; N/A   ; None         ; 14.334 ns  ; din         ; licheng:u2|run[5]          ; clk      ;
+; N/A   ; None         ; 14.091 ns  ; din         ; licheng:u2|run[4]          ; clk      ;
+; N/A   ; None         ; 14.086 ns  ; din         ; licheng:u2|run[6]          ; clk      ;
+; N/A   ; None         ; 13.810 ns  ; din         ; licheng:u2|run[0]          ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[5]        ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[4]        ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[0]        ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[3]        ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[2]        ; clk      ;
+; N/A   ; None         ; 10.677 ns  ; din         ; total_run:u4|run[1]        ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[9]        ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[6]        ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[8]        ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[7]        ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[10]       ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[11]       ; clk      ;
+; N/A   ; None         ; 10.673 ns  ; din         ; total_run:u4|run[12]       ; clk      ;
+; N/A   ; None         ; 9.195 ns   ; din         ; total_run:u4|dp_total      ; clk      ;
+; N/A   ; None         ; 8.984 ns   ; din         ; licheng:u2|flag            ; clk      ;
+; N/A   ; None         ; 5.881 ns   ; key_start   ; remove_jitter:u19|count[2] ; clk      ;
+; N/A   ; None         ; 5.881 ns   ; key_start   ; remove_jitter:u19|count[1] ; clk      ;
+; N/A   ; None         ; 5.881 ns   ; key_start   ; remove_jitter:u19|count[0] ; clk      ;
+; N/A   ; None         ; 5.881 ns   ; key_start   ; remove_jitter:u19|count[3] ; clk      ;
+; N/A   ; None         ; 5.623 ns   ; key_time    ; remove_jitter:u20|count[2] ; clk      ;
+; N/A   ; None         ; 5.623 ns   ; key_time    ; remove_jitter:u20|count[1] ; clk      ;
+; N/A   ; None         ; 5.623 ns   ; key_time    ; remove_jitter:u20|count[0] ; clk      ;
+; N/A   ; None         ; 5.623 ns   ; key_time    ; remove_jitter:u20|count[3] ; clk      ;
+; N/A   ; None         ; 5.449 ns   ; key_conform ; remove_jitter:u22|count[2] ; clk      ;
+; N/A   ; None         ; 5.449 ns   ; key_conform ; remove_jitter:u22|count[1] ; clk      ;
+; N/A   ; None         ; 5.449 ns   ; key_conform ; remove_jitter:u22|count[0] ; clk      ;
+; N/A   ; None         ; 5.449 ns   ; key_conform ; remove_jitter:u22|count[3] ; clk      ;
+; N/A   ; None         ; 5.249 ns   ; key_price   ; remove_jitter:u24|count[2] ; clk      ;
+; N/A   ; None         ; 5.249 ns   ; key_price   ; remove_jitter:u24|count[1] ; clk      ;
+; N/A   ; None         ; 5.249 ns   ; key_price   ; remove_jitter:u24|count[0] ; clk      ;
+; N/A   ; None         ; 5.249 ns   ; key_price   ; remove_jitter:u24|count[3] ; clk      ;
+; N/A   ; None         ; 5.138 ns   ; key_select  ; remove_jitter:u21|count[2] ; clk      ;
+; N/A   ; None         ; 5.138 ns   ; key_select  ; remove_jitter:u21|count[1] ; clk      ;
+; N/A   ; None         ; 5.138 ns   ; key_select  ; remove_jitter:u21|count[0] ; clk      ;
+; N/A   ; None         ; 5.138 ns   ; key_select  ; remove_jitter:u21|count[3] ; clk      ;
+; N/A   ; None         ; 5.021 ns   ; key_start   ; remove_jitter:u19|key_out  ; clk      ;
+; N/A   ; None         ; 4.784 ns   ; key_conform ; remove_jitter:u22|key_out  ; clk      ;
+; N/A   ; None         ; 4.764 ns   ; key_time    ; remove_jitter:u20|key_out  ; clk      ;
+; N/A   ; None         ; 4.588 ns   ; key_set     ; remove_jitter:u23|count[2] ; clk      ;
+; N/A   ; None         ; 4.588 ns   ; key_set     ; remove_jitter:u23|count[1] ; clk      ;
+; N/A   ; None         ; 4.588 ns   ; key_set     ; remove_jitter:u23|count[0] ; clk      ;
+; N/A   ; None         ; 4.588 ns   ; key_set     ; remove_jitter:u23|count[3] ; clk      ;
+; N/A   ; None         ; 4.584 ns   ; key_price   ; remove_jitter:u24|key_out  ; clk      ;
+; N/A   ; None         ; 4.279 ns   ; key_select  ; remove_jitter:u21|key_out  ; clk      ;
+; N/A   ; None         ; 3.729 ns   ; key_set     ; remove_jitter:u23|key_out  ; clk      ;
++-------+--------------+------------+-------------+----------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------+
+; tco                                                                                            ;
++-------+--------------+------------+-----------------------------+-----------------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To              ; From Clock ;
++-------+--------------+------------+-----------------------------+-----------------+------------+
+; N/A   ; None         ; 10.292 ns  ; displaydistance:u11|outp[0] ; outpdistance[0] ; clk        ;
+; N/A   ; None         ; 9.979 ns   ; displaytime:u9|outp[1]      ; outptime[1]     ; clk        ;
+; N/A   ; None         ; 9.884 ns   ; displaydistance:u11|sel[2]  ; seldistance[2]  ; clk        ;
+; N/A   ; None         ; 9.657 ns   ; displayprice:u18|outp[0]    ; outpprice[0]    ; clk        ;
+; N/A   ; None         ; 9.482 ns   ; displayprice:u18|outp[1]    ; outpprice[1]    ; clk        ;
+; N/A   ; None         ; 9.431 ns   ; displaytime:u9|outp[6]      ; outptime[6]     ; clk        ;
+; N/A   ; None         ; 9.416 ns   ; displaytime:u9|outp[5]      ; outptime[5]     ; clk        ;
+; N/A   ; None         ; 9.313 ns   ; displayprice:u18|sel[2]     ; selprice[2]     ; clk        ;
+; N/A   ; None         ; 9.309 ns   ; displaydistance:u11|sel[1]  ; seldistance[1]  ; clk        ;
+; N/A   ; None         ; 9.285 ns   ; displayprice:u18|outp[6]    ; outpprice[6]    ; clk        ;
+; N/A   ; None         ; 9.283 ns   ; displaytime:u9|outp[7]      ; outptime[7]     ; clk        ;
+; N/A   ; None         ; 9.066 ns   ; displayprice:u18|outp[4]    ; outpprice[4]    ; clk        ;
+; N/A   ; None         ; 9.064 ns   ; displaytime:u9|outp[4]      ; outptime[4]     ; clk        ;
+; N/A   ; None         ; 9.039 ns   ; displaydistance:u11|outp[4] ; outpdistance[4] ; clk        ;
+; N/A   ; None         ; 8.899 ns   ; displayprice:u18|outp[7]    ; outpprice[7]    ; clk        ;
+; N/A   ; None         ; 8.644 ns   ; displaydistance:u11|outp[5] ; outpdistance[5] ; clk        ;
+; N/A   ; None         ; 8.643 ns   ; displaydistance:u11|outp[1] ; outpdistance[1] ; clk        ;
+; N/A   ; None         ; 8.642 ns   ; displaytime:u9|sel[2]       ; seltime[2]      ; clk        ;
+; N/A   ; None         ; 8.619 ns   ; displaydistance:u11|outp[3] ; outpdistance[3] ; clk        ;
+; N/A   ; None         ; 8.119 ns   ; displaytime:u9|outp[2]      ; outptime[2]     ; clk        ;
+; N/A   ; None         ; 8.110 ns   ; displayprice:u18|outp[5]    ; outpprice[5]    ; clk        ;
+; N/A   ; None         ; 8.049 ns   ; displaydistance:u11|outp[2] ; outpdistance[2] ; clk        ;
+; N/A   ; None         ; 8.035 ns   ; displaydistance:u11|outp[6] ; outpdistance[6] ; clk        ;
+; N/A   ; None         ; 8.016 ns   ; displaytime:u9|sel[0]       ; seltime[0]      ; clk        ;
+; N/A   ; None         ; 7.753 ns   ; displaytime:u9|sel[1]       ; seltime[1]      ; clk        ;
+; N/A   ; None         ; 7.706 ns   ; displayprice:u18|outp[2]    ; outpprice[2]    ; clk        ;
+; N/A   ; None         ; 7.700 ns   ; displayprice:u18|outp[3]    ; outpprice[3]    ; clk        ;
+; N/A   ; None         ; 7.662 ns   ; displaytime:u9|outp[0]      ; outptime[0]     ; clk        ;
+; N/A   ; None         ; 7.648 ns   ; displaytime:u9|outp[3]      ; outptime[3]     ; clk        ;
+; N/A   ; None         ; 7.602 ns   ; displayprice:u18|sel[1]     ; selprice[1]     ; clk        ;
+; N/A   ; None         ; 7.602 ns   ; displayprice:u18|sel[0]     ; selprice[0]     ; clk        ;
+; N/A   ; None         ; 7.597 ns   ; displaydistance:u11|sel[0]  ; seldistance[0]  ; clk        ;
++-------+--------------+------------+-----------------------------+-----------------+------------+
+
+
++------------------------------------------------------------------------------------------------+
+; th                                                                                             ;
++---------------+-------------+------------+-------------+----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th  ; From        ; To                         ; To Clock ;
++---------------+-------------+------------+-------------+----------------------------+----------+
+; N/A           ; None        ; -3.677 ns  ; key_set     ; remove_jitter:u23|key_out  ; clk      ;
+; N/A           ; None        ; -4.227 ns  ; key_select  ; remove_jitter:u21|key_out  ; clk      ;
+; N/A           ; None        ; -4.532 ns  ; key_price   ; remove_jitter:u24|key_out  ; clk      ;
+; N/A           ; None        ; -4.536 ns  ; key_set     ; remove_jitter:u23|count[2] ; clk      ;
+; N/A           ; None        ; -4.536 ns  ; key_set     ; remove_jitter:u23|count[1] ; clk      ;
+; N/A           ; None        ; -4.536 ns  ; key_set     ; remove_jitter:u23|count[0] ; clk      ;
+; N/A           ; None        ; -4.536 ns  ; key_set     ; remove_jitter:u23|count[3] ; clk      ;
+; N/A           ; None        ; -4.712 ns  ; key_time    ; remove_jitter:u20|key_out  ; clk      ;
+; N/A           ; None        ; -4.732 ns  ; key_conform ; remove_jitter:u22|key_out  ; clk      ;
+; N/A           ; None        ; -4.969 ns  ; key_start   ; remove_jitter:u19|key_out  ; clk      ;
+; N/A           ; None        ; -5.086 ns  ; key_select  ; remove_jitter:u21|count[2] ; clk      ;
+; N/A           ; None        ; -5.086 ns  ; key_select  ; remove_jitter:u21|count[1] ; clk      ;
+; N/A           ; None        ; -5.086 ns  ; key_select  ; remove_jitter:u21|count[0] ; clk      ;
+; N/A           ; None        ; -5.086 ns  ; key_select  ; remove_jitter:u21|count[3] ; clk      ;
+; N/A           ; None        ; -5.197 ns  ; key_price   ; remove_jitter:u24|count[2] ; clk      ;
+; N/A           ; None        ; -5.197 ns  ; key_price   ; remove_jitter:u24|count[1] ; clk      ;
+; N/A           ; None        ; -5.197 ns  ; key_price   ; remove_jitter:u24|count[0] ; clk      ;
+; N/A           ; None        ; -5.197 ns  ; key_price   ; remove_jitter:u24|count[3] ; clk      ;
+; N/A           ; None        ; -5.397 ns  ; key_conform ; remove_jitter:u22|count[2] ; clk      ;
+; N/A           ; None        ; -5.397 ns  ; key_conform ; remove_jitter:u22|count[1] ; clk      ;
+; N/A           ; None        ; -5.397 ns  ; key_conform ; remove_jitter:u22|count[0] ; clk      ;
+; N/A           ; None        ; -5.397 ns  ; key_conform ; remove_jitter:u22|count[3] ; clk      ;
+; N/A           ; None        ; -5.571 ns  ; key_time    ; remove_jitter:u20|count[2] ; clk      ;
+; N/A           ; None        ; -5.571 ns  ; key_time    ; remove_jitter:u20|count[1] ; clk      ;
+; N/A           ; None        ; -5.571 ns  ; key_time    ; remove_jitter:u20|count[0] ; clk      ;
+; N/A           ; None        ; -5.571 ns  ; key_time    ; remove_jitter:u20|count[3] ; clk      ;
+; N/A           ; None        ; -5.829 ns  ; key_start   ; remove_jitter:u19|count[2] ; clk      ;
+; N/A           ; None        ; -5.829 ns  ; key_start   ; remove_jitter:u19|count[1] ; clk      ;
+; N/A           ; None        ; -5.829 ns  ; key_start   ; remove_jitter:u19|count[0] ; clk      ;
+; N/A           ; None        ; -5.829 ns  ; key_start   ; remove_jitter:u19|count[3] ; clk      ;
+; N/A           ; None        ; -6.421 ns  ; din         ; licheng:u2|twofive[2]      ; clk      ;
+; N/A           ; None        ; -6.704 ns  ; din         ; licheng:u2|dp              ; clk      ;
+; N/A           ; None        ; -7.551 ns  ; din         ; licheng:u2|twenty[3]       ; clk      ;
+; N/A           ; None        ; -7.592 ns  ; din         ; licheng:u2|twenty[1]       ; clk      ;
+; N/A           ; None        ; -7.612 ns  ; din         ; licheng:u2|twenty[0]       ; clk      ;
+; N/A           ; None        ; -7.672 ns  ; din         ; licheng:u2|twofive[1]      ; clk      ;
+; N/A           ; None        ; -7.674 ns  ; din         ; licheng:u2|twofive[0]      ; clk      ;
+; N/A           ; None        ; -8.022 ns  ; din         ; licheng:u2|yuancheng       ; clk      ;
+; N/A           ; None        ; -8.215 ns  ; din         ; licheng:u2|run[3]          ; clk      ;
+; N/A           ; None        ; -8.236 ns  ; din         ; licheng:u2|run[0]          ; clk      ;
+; N/A           ; None        ; -8.259 ns  ; din         ; licheng:u2|run[7]          ; clk      ;
+; N/A           ; None        ; -8.291 ns  ; din         ; licheng:u2|twenty[2]       ; clk      ;
+; N/A           ; None        ; -8.355 ns  ; din         ; licheng:u2|run[1]          ; clk      ;
+; N/A           ; None        ; -8.502 ns  ; din         ; licheng:u2|run[12]         ; clk      ;
+; N/A           ; None        ; -8.548 ns  ; din         ; licheng:u2|run[4]          ; clk      ;
+; N/A           ; None        ; -8.671 ns  ; din         ; licheng:u2|run[6]          ; clk      ;
+; N/A           ; None        ; -8.759 ns  ; din         ; licheng:u2|run[2]          ; clk      ;
+; N/A           ; None        ; -8.759 ns  ; din         ; licheng:u2|run[8]          ; clk      ;
+; N/A           ; None        ; -8.802 ns  ; din         ; licheng:u2|run[9]          ; clk      ;
+; N/A           ; None        ; -8.802 ns  ; din         ; licheng:u2|run[11]         ; clk      ;
+; N/A           ; None        ; -8.932 ns  ; din         ; licheng:u2|flag            ; clk      ;
+; N/A           ; None        ; -9.143 ns  ; din         ; total_run:u4|dp_total      ; clk      ;
+; N/A           ; None        ; -9.151 ns  ; din         ; licheng:u2|run[5]          ; clk      ;
+; N/A           ; None        ; -9.247 ns  ; din         ; licheng:u2|run[10]         ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[9]        ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[6]        ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[8]        ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[7]        ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[10]       ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[11]       ; clk      ;
+; N/A           ; None        ; -10.621 ns ; din         ; total_run:u4|run[12]       ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[5]        ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[4]        ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[0]        ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[3]        ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[2]        ; clk      ;
+; N/A           ; None        ; -10.625 ns ; din         ; total_run:u4|run[1]        ; clk      ;
++---------------+-------------+------------+-------------+----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Jan 05 14:58:32 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off main -c main --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "state_controller:u12|next_state.start_reset_180" is a latch
+    Warning: Node "or2total:u16|total[13]" is a latch
+    Warning: Node "or2total:u16|total[12]" is a latch
+    Warning: Node "hl:u1|ceout" is a latch
+    Warning: Node "state_controller:u12|next_state.beyond_starting_price_123" is a latch
+    Warning: Node "or2total:u16|total[11]" is a latch
+    Warning: Node "or2total:u16|total[10]" is a latch
+    Warning: Node "or2total:u16|total[9]" is a latch
+    Warning: Node "or2total:u16|total[8]" is a latch
+    Warning: Node "or2total:u16|total[7]" is a latch
+    Warning: Node "or2total:u16|total[5]" is a latch
+    Warning: Node "or2total:u16|total[4]" is a latch
+    Warning: Node "or2total:u16|total[3]" is a latch
+    Warning: Node "or2total:u16|total[2]" is a latch
+    Warning: Node "or2total:u16|total[6]" is a latch
+    Warning: Node "or2total:u16|total[1]" is a latch
+    Warning: Node "or2total:u16|total[0]" is a latch
+    Warning: Node "or2time:u30|rfh[1]" is a latch
+    Warning: Node "or2time:u30|rsfen[1]" is a latch
+    Warning: Node "or2time:u30|rfh[2]" is a latch
+    Warning: Node "or2time:u30|rffen[2]" is a latch
+    Warning: Node "or2time:u30|rsfen[2]" is a latch
+    Warning: Node "or2time:u30|rsh[2]" is a latch
+    Warning: Node "or2time:u30|rsh[1]" is a latch
+    Warning: Node "or2time:u30|rffen[1]" is a latch
+    Warning: Node "or2time:u30|rffen[3]" is a latch
+    Warning: Node "or2time:u30|rfh[3]" is a latch
+    Warning: Node "or2time:u30|rsh[3]" is a latch
+    Warning: Node "or2time:u30|rsfen[3]" is a latch
+    Warning: Node "or2time:u30|rffen[0]" is a latch
+    Warning: Node "or2time:u30|rsh[0]" is a latch
+    Warning: Node "or2time:u30|rsfen[0]" is a latch
+    Warning: Node "or2time:u30|rfh[0]" is a latch
+    Warning: Node "or2time:u30|rshtemp[2]" is a latch
+    Warning: Node "or2time:u30|rfhtemp[2]" is a latch
+    Warning: Node "or2time:u30|rffentemp[2]" is a latch
+    Warning: Node "or2time:u30|rsfentemp[2]" is a latch
+    Warning: Node "or2time:u30|rfhtemp[1]" is a latch
+    Warning: Node "or2time:u30|rshtemp[1]" is a latch
+    Warning: Node "or2time:u30|rffentemp[1]" is a latch
+    Warning: Node "or2time:u30|rsfentemp[1]" is a latch
+    Warning: Node "or2time:u30|rshtemp[3]" is a latch
+    Warning: Node "or2time:u30|rfhtemp[3]" is a latch
+    Warning: Node "or2time:u30|rffentemp[3]" is a latch
+    Warning: Node "or2time:u30|rsfentemp[3]" is a latch
+    Warning: Node "or2time:u30|rfhtemp[0]" is a latch
+    Warning: Node "or2time:u30|rshtemp[0]" is a latch
+    Warning: Node "or2time:u30|rffentemp[0]" is a latch
+    Warning: Node "or2time:u30|rsfentemp[0]" is a latch
+    Warning: Node "state_controller:u12|next_state.stop_161" is a latch
+    Warning: Node "state_controller:u12|state_start" is a latch
+    Warning: Node "state_controller:u12|next_state.within_starting_price_142" is a latch
+    Warning: Node "starting_price:u14|total_price[3]" is a latch
+    Warning: Node "starting_price:u14|total_price[2]" is a latch
+    Warning: Node "starting_price:u14|total_price[0]" is a latch
+    Warning: Node "starting_price:u14|total_price[1]" is a latch
+    Warning: Node "starting_price:u14|total_price[4]" is a latch
+    Warning: Node "starting_price:u14|total_price[6]" is a latch
+    Warning: Node "starting_price:u14|total_price[5]" is a latch
+    Warning: Node "starting_price:u14|total_price[7]" is a latch
+    Warning: Node "or5price:u29|price[7]" is a latch
+    Warning: Node "or5price:u29|price[6]" is a latch
+    Warning: Node "or5price:u29|price[5]" is a latch
+    Warning: Node "or5price:u29|price[4]" is a latch
+    Warning: Node "or5price:u29|price[3]" is a latch
+    Warning: Node "or5price:u29|price[2]" is a latch
+    Warning: Node "or5price:u29|price[1]" is a latch
+    Warning: Node "or5price:u29|price[0]" is a latch
+    Warning: Node "or2time:u30|vshtemp[2]" is a latch
+    Warning: Node "or2time:u30|vfhtemp[2]" is a latch
+    Warning: Node "or2time:u30|vffentemp[2]" is a latch
+    Warning: Node "or2time:u30|vsfentemp[2]" is a latch
+    Warning: Node "or2time:u30|vfhtemp[1]" is a latch
+    Warning: Node "or2time:u30|vshtemp[1]" is a latch
+    Warning: Node "or2time:u30|vffentemp[1]" is a latch
+    Warning: Node "or2time:u30|vsfentemp[1]" is a latch
+    Warning: Node "or2time:u30|vshtemp[3]" is a latch
+    Warning: Node "or2time:u30|vfhtemp[3]" is a latch
+    Warning: Node "or2time:u30|vffentemp[3]" is a latch
+    Warning: Node "or2time:u30|vsfentemp[3]" is a latch
+    Warning: Node "or2time:u30|vfhtemp[0]" is a latch
+    Warning: Node "or2time:u30|vshtemp[0]" is a latch
+    Warning: Node "or2time:u30|vffentemp[0]" is a latch
+    Warning: Node "or2time:u30|vsfentemp[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 53 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "starting_price:u14|total_price[7]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[5]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[6]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[4]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[1]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[0]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[2]" as buffer
+    Info: Detected ripple clock "starting_price:u14|total_price[3]" as buffer
+    Info: Detected ripple clock "state_controller:u12|state_start" as buffer
+    Info: Detected gated clock "or5price:u29|price[13]~67" as buffer
+    Info: Detected gated clock "or5price:u29|price[13]~66" as buffer
+    Info: Detected gated clock "starting_price:u14|Equal1~0" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~10" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~9" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~8" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~7" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~6" as buffer
+    Info: Detected ripple clock "set_price:u27|pricesel[31]" as buffer
+    Info: Detected ripple clock "set_price:u27|pricesel[0]" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~5" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~4" as buffer
+    Info: Detected gated clock "state_controller:u12|state_start~0" as buffer
+    Info: Detected gated clock "or2time:u30|rshtemp[0]~0" as buffer
+    Info: Detected gated clock "state_controller:u12|Selector3~1" as buffer
+    Info: Detected ripple clock "state_controller:u12|current_state.within_starting_price" as buffer
+    Info: Detected gated clock "state_controller:u12|Selector3~0" as buffer
+    Info: Detected ripple clock "state_controller:u12|current_state.stop" as buffer
+    Info: Detected ripple clock "set_price:u27|pricesel[1]" as buffer
+    Info: Detected ripple clock "set_price:u27|pricesel[2]" as buffer
+    Info: Detected ripple clock "SetInit:u25|timesel" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[12]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[11]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[10]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[9]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[8]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[7]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[6]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[5]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[4]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[3]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[2]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[1]" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[0]" as buffer
+    Info: Detected ripple clock "state_controller:u12|current_state.beyond_starting_price" as buffer
+    Info: Detected ripple clock "unit_price:u15|total_price[13]" as buffer
+    Info: Detected ripple clock "drivetime:u5|dout" as buffer
+    Info: Detected ripple clock "licheng:u2|twofive[2]" as buffer
+    Info: Detected gated clock "or2total:u16|process_0~13" as buffer
+    Info: Detected gated clock "or2total:u16|total[13]~32" as buffer
+    Info: Detected gated clock "or2total:u16|total[13]~33" as buffer
+    Info: Detected ripple clock "total_run:u4|dp_total" as buffer
+    Info: Detected ripple clock "state_controller:u12|current_state.start_reset" as buffer
+    Info: Detected ripple clock "remove_jitter:u19|key_out" as buffer
+Info: Clock "clk" has Internal fmax of 20.06 MHz between source register "or2total:u16|total[5]" and destination register "separateprice:u17|combb[3]" (period= 49.84 ns)
+    Info: + Longest register to register delay is 6.661 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X24_Y19_N3; Fanout = 3; REG Node = 'or2total:u16|total[5]'
+        Info: 2: + IC(1.104 ns) + CELL(0.564 ns) = 1.668 ns; Loc. = LC_X26_Y19_N8; Fanout = 1; COMB Node = 'separateprice:u17|LessThan0~42'
+        Info: 3: + IC(0.000 ns) + CELL(0.271 ns) = 1.939 ns; Loc. = LC_X26_Y19_N9; Fanout = 1; COMB Node = 'separateprice:u17|LessThan0~37'
+        Info: 4: + IC(0.000 ns) + CELL(0.136 ns) = 2.075 ns; Loc. = LC_X26_Y18_N4; Fanout = 1; COMB Node = 'separateprice:u17|LessThan0~12'
+        Info: 5: + IC(0.000 ns) + CELL(0.621 ns) = 2.696 ns; Loc. = LC_X26_Y18_N6; Fanout = 17; COMB Node = 'separateprice:u17|LessThan0~0'
+        Info: 6: + IC(0.436 ns) + CELL(0.114 ns) = 3.246 ns; Loc. = LC_X26_Y18_N9; Fanout = 10; COMB Node = 'separateprice:u17|combc[1]~16'
+        Info: 7: + IC(2.548 ns) + CELL(0.867 ns) = 6.661 ns; Loc. = LC_X46_Y18_N8; Fanout = 3; REG Node = 'separateprice:u17|combb[3]'
+        Info: Total cell delay = 2.573 ns ( 38.63 % )
+        Info: Total interconnect delay = 4.088 ns ( 61.37 % )
+    Info: - Smallest clock skew is -18.222 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 3.111 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+            Info: 2: + IC(0.931 ns) + CELL(0.711 ns) = 3.111 ns; Loc. = LC_X46_Y18_N8; Fanout = 3; REG Node = 'separateprice:u17|combb[3]'
+            Info: Total cell delay = 2.180 ns ( 70.07 % )
+            Info: Total interconnect delay = 0.931 ns ( 29.93 % )
+        Info: - Longest clock path from clock "clk" to source register is 21.333 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+            Info: 2: + IC(0.931 ns) + CELL(0.935 ns) = 3.335 ns; Loc. = LC_X46_Y18_N9; Fanout = 249; REG Node = 'state_controller:u12|current_state.start_reset'
+            Info: 3: + IC(0.759 ns) + CELL(0.114 ns) = 4.208 ns; Loc. = LC_X45_Y18_N7; Fanout = 8; COMB Node = 'starting_price:u14|Equal1~0'
+            Info: 4: + IC(6.132 ns) + CELL(0.114 ns) = 10.454 ns; Loc. = LC_X35_Y19_N9; Fanout = 2; REG Node = 'starting_price:u14|total_price[4]'
+            Info: 5: + IC(1.207 ns) + CELL(0.590 ns) = 12.251 ns; Loc. = LC_X34_Y19_N9; Fanout = 2; COMB Node = 'or2total:u16|process_0~5'
+            Info: 6: + IC(3.720 ns) + CELL(0.292 ns) = 16.263 ns; Loc. = LC_X61_Y16_N7; Fanout = 9; COMB Node = 'or2total:u16|process_0~13'
+            Info: 7: + IC(0.438 ns) + CELL(0.292 ns) = 16.993 ns; Loc. = LC_X61_Y16_N3; Fanout = 14; COMB Node = 'or2total:u16|total[13]~33'
+            Info: 8: + IC(4.226 ns) + CELL(0.114 ns) = 21.333 ns; Loc. = LC_X24_Y19_N3; Fanout = 3; REG Node = 'or2total:u16|total[5]'
+            Info: Total cell delay = 3.920 ns ( 18.38 % )
+            Info: Total interconnect delay = 17.413 ns ( 81.62 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 201 non-operational path(s) clocked by clock "clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "unit_price:u15|total_price[12]" and destination pin or register "or2total:u16|total[12]" for clock "clk" (Hold time is 16.099 ns)
+    Info: + Largest clock skew is 18.132 ns
+        Info: + Longest clock path from clock "clk" to destination register is 21.345 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+            Info: 2: + IC(0.931 ns) + CELL(0.935 ns) = 3.335 ns; Loc. = LC_X46_Y18_N9; Fanout = 249; REG Node = 'state_controller:u12|current_state.start_reset'
+            Info: 3: + IC(0.759 ns) + CELL(0.114 ns) = 4.208 ns; Loc. = LC_X45_Y18_N7; Fanout = 8; COMB Node = 'starting_price:u14|Equal1~0'
+            Info: 4: + IC(6.132 ns) + CELL(0.114 ns) = 10.454 ns; Loc. = LC_X35_Y19_N9; Fanout = 2; REG Node = 'starting_price:u14|total_price[4]'
+            Info: 5: + IC(1.207 ns) + CELL(0.590 ns) = 12.251 ns; Loc. = LC_X34_Y19_N9; Fanout = 2; COMB Node = 'or2total:u16|process_0~5'
+            Info: 6: + IC(3.720 ns) + CELL(0.292 ns) = 16.263 ns; Loc. = LC_X61_Y16_N7; Fanout = 9; COMB Node = 'or2total:u16|process_0~13'
+            Info: 7: + IC(0.438 ns) + CELL(0.292 ns) = 16.993 ns; Loc. = LC_X61_Y16_N3; Fanout = 14; COMB Node = 'or2total:u16|total[13]~33'
+            Info: 8: + IC(4.238 ns) + CELL(0.114 ns) = 21.345 ns; Loc. = LC_X27_Y20_N7; Fanout = 3; REG Node = 'or2total:u16|total[12]'
+            Info: Total cell delay = 3.920 ns ( 18.36 % )
+            Info: Total interconnect delay = 17.425 ns ( 81.64 % )
+        Info: - Shortest clock path from clock "clk" to source register is 3.213 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+            Info: 2: + IC(1.033 ns) + CELL(0.711 ns) = 3.213 ns; Loc. = LC_X27_Y20_N5; Fanout = 2; REG Node = 'unit_price:u15|total_price[12]'
+            Info: Total cell delay = 2.180 ns ( 67.85 % )
+            Info: Total interconnect delay = 1.033 ns ( 32.15 % )
+    Info: - Micro clock to output delay of source is 0.224 ns
+    Info: - Shortest register to register delay is 1.809 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X27_Y20_N5; Fanout = 2; REG Node = 'unit_price:u15|total_price[12]'
+        Info: 2: + IC(0.514 ns) + CELL(0.442 ns) = 0.956 ns; Loc. = LC_X27_Y20_N8; Fanout = 1; COMB Node = 'or2total:u16|total[12]~34'
+        Info: 3: + IC(0.411 ns) + CELL(0.442 ns) = 1.809 ns; Loc. = LC_X27_Y20_N7; Fanout = 3; REG Node = 'or2total:u16|total[12]'
+        Info: Total cell delay = 0.884 ns ( 48.87 % )
+        Info: Total interconnect delay = 0.925 ns ( 51.13 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "licheng:u2|twofive[0]" (data pin = "din", clock pin = "clk") is 20.112 ns
+    Info: + Longest pin to register delay is 23.191 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_J18; Fanout = 23; PIN Node = 'din'
+        Info: 2: + IC(7.247 ns) + CELL(0.114 ns) = 8.830 ns; Loc. = LC_X51_Y21_N4; Fanout = 13; COMB Node = 'licheng:u2|run~104'
+        Info: 3: + IC(1.351 ns) + CELL(0.590 ns) = 10.771 ns; Loc. = LC_X52_Y20_N0; Fanout = 6; COMB Node = 'licheng:u2|Add1~17'
+        Info: 4: + IC(1.719 ns) + CELL(0.590 ns) = 13.080 ns; Loc. = LC_X48_Y19_N5; Fanout = 4; COMB Node = 'licheng:u2|LessThan4~1'
+        Info: 5: + IC(1.222 ns) + CELL(0.292 ns) = 14.594 ns; Loc. = LC_X48_Y19_N4; Fanout = 5; COMB Node = 'licheng:u2|LessThan4~2'
+        Info: 6: + IC(1.681 ns) + CELL(0.442 ns) = 16.717 ns; Loc. = LC_X51_Y20_N4; Fanout = 2; COMB Node = 'licheng:u2|twofive[0]~70'
+        Info: 7: + IC(1.646 ns) + CELL(0.292 ns) = 18.655 ns; Loc. = LC_X48_Y18_N0; Fanout = 1; COMB Node = 'licheng:u2|twofive[0]~78'
+        Info: 8: + IC(1.258 ns) + CELL(0.442 ns) = 20.355 ns; Loc. = LC_X48_Y21_N0; Fanout = 1; COMB Node = 'licheng:u2|twofive[0]~79'
+        Info: 9: + IC(0.182 ns) + CELL(0.114 ns) = 20.651 ns; Loc. = LC_X48_Y21_N1; Fanout = 2; COMB Node = 'licheng:u2|twofive[0]~80'
+        Info: 10: + IC(1.673 ns) + CELL(0.867 ns) = 23.191 ns; Loc. = LC_X51_Y22_N5; Fanout = 5; REG Node = 'licheng:u2|twofive[0]'
+        Info: Total cell delay = 5.212 ns ( 22.47 % )
+        Info: Total interconnect delay = 17.979 ns ( 77.53 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 3.116 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+        Info: 2: + IC(0.936 ns) + CELL(0.711 ns) = 3.116 ns; Loc. = LC_X51_Y22_N5; Fanout = 5; REG Node = 'licheng:u2|twofive[0]'
+        Info: Total cell delay = 2.180 ns ( 69.96 % )
+        Info: Total interconnect delay = 0.936 ns ( 30.04 % )
+Info: tco from clock "clk" to destination pin "outpdistance[0]" through register "displaydistance:u11|outp[0]" is 10.292 ns
+    Info: + Longest clock path from clock "clk" to source register is 3.116 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+        Info: 2: + IC(0.936 ns) + CELL(0.711 ns) = 3.116 ns; Loc. = LC_X42_Y20_N9; Fanout = 1; REG Node = 'displaydistance:u11|outp[0]'
+        Info: Total cell delay = 2.180 ns ( 69.96 % )
+        Info: Total interconnect delay = 0.936 ns ( 30.04 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 6.952 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X42_Y20_N9; Fanout = 1; REG Node = 'displaydistance:u11|outp[0]'
+        Info: 2: + IC(4.828 ns) + CELL(2.124 ns) = 6.952 ns; Loc. = PIN_J5; Fanout = 0; PIN Node = 'outpdistance[0]'
+        Info: Total cell delay = 2.124 ns ( 30.55 % )
+        Info: Total interconnect delay = 4.828 ns ( 69.45 % )
+Info: th for register "remove_jitter:u23|key_out" (data pin = "key_set", clock pin = "clk") is -3.677 ns
+    Info: + Longest clock path from clock "clk" to destination register is 3.116 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_K6; Fanout = 934; CLK Node = 'clk'
+        Info: 2: + IC(0.936 ns) + CELL(0.711 ns) = 3.116 ns; Loc. = LC_X48_Y30_N7; Fanout = 12; REG Node = 'remove_jitter:u23|key_out'
+        Info: Total cell delay = 2.180 ns ( 69.96 % )
+        Info: Total interconnect delay = 0.936 ns ( 30.04 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 6.808 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_D14; Fanout = 5; PIN Node = 'key_set'
+        Info: 2: + IC(5.024 ns) + CELL(0.309 ns) = 6.808 ns; Loc. = LC_X48_Y30_N7; Fanout = 12; REG Node = 'remove_jitter:u23|key_out'
+        Info: Total cell delay = 1.784 ns ( 26.20 % )
+        Info: Total interconnect delay = 5.024 ns ( 73.80 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 191 megabytes
+    Info: Processing ended: Sat Jan 05 14:58:33 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

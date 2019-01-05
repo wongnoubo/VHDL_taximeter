@@ -1,0 +1,7 @@
+
+State Machine - |main|state_controller:u12|current_state
+Name current_state.beyond_starting_price current_state.within_starting_price current_state.start_reset current_state.stop 
+current_state.stop 0 0 0 0 
+current_state.start_reset 0 0 1 1 
+current_state.within_starting_price 0 1 0 1 
+current_state.beyond_starting_price 1 0 0 1 

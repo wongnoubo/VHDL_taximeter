@@ -1,0 +1,45 @@
+--调用各个头文件
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+--起步价内计价
+entity starting_price is
+	--generic(
+		--		day_starting_price : integer range 0 to 200 := 100;		--白天起步价
+		--		night_starting_price : integer range 0 to 200 := 120		--夜晚起步价
+	--);
+		port(
+				st : in std_logic;
+				load : in std_logic;
+				--night drive
+				night : in std_logic;
+				--时钟脉冲
+				clk : in std_logic;
+				--输入状态机判断的计价状态
+				state_pricing : in integer range 1 to 4;
+				--车费
+				day_starting_price :in integer range 0 to 200;
+				night_starting_price :in integer range 0 to 200;
+				total_price : out integer range 0 to 10000
+	);
+end entity starting_price;
+
+architecture start of starting_price is
+begin
+	process(load , clk ,  night , state_pricing  )
+	begin
+		if state_pricing = 1 and load = '1' then    --总价复位为0
+			total_price <= 0;
+		end if;
+		if state_pricing = 2 then                    --起步价内计价
+			if night = '0' then							--白天起步价
+				total_price <= day_starting_price;
+			elsif night = '1' then						--夜间起步价
+				total_price <= night_starting_price;
+			end if;
+		end if;
+		if state_pricing = 3 then
+			total_price <= 0;
+		end if;
+	end process;
+end start;

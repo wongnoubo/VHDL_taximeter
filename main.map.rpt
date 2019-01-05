@@ -1,0 +1,1489 @@
+Analysis & Synthesis report for main
+Sat Jan 05 14:58:13 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |main|state_controller:u12|current_state
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_2|mult4b:u25_1
+ 15. Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_3|mult4b:u25_1
+ 16. Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_4|mult4b:u25_1
+ 17. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_2|mult4b:u25_1
+ 18. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_3|mult4b:u25_1
+ 19. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_4|mult4b:u25_1
+ 20. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_5|mult4b:u25_1
+ 21. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_6|mult4b:u25_1
+ 22. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_7|mult4b:u25_1
+ 23. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_8|mult4b:u25_1
+ 24. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_9|mult4b:u25_1
+ 25. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_10|mult4b:u25_1
+ 26. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_11|mult4b:u25_1
+ 27. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_12|mult4b:u25_1
+ 28. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_13|mult4b:u25_1
+ 29. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_14|mult4b:u25_1
+ 30. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_15|mult4b:u25_1
+ 31. Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_16|mult4b:u25_1
+ 32. Port Connectivity Checks: "setprice:u28|mult10b:u28_16"
+ 33. Port Connectivity Checks: "setprice:u28|mult10b:u28_15"
+ 34. Port Connectivity Checks: "setprice:u28|mult10b:u28_14"
+ 35. Port Connectivity Checks: "setprice:u28|mult10b:u28_13"
+ 36. Port Connectivity Checks: "setprice:u28|mult10b:u28_12"
+ 37. Port Connectivity Checks: "setprice:u28|mult10b:u28_11"
+ 38. Port Connectivity Checks: "setprice:u28|mult10b:u28_10"
+ 39. Port Connectivity Checks: "setprice:u28|mult10b:u28_9"
+ 40. Port Connectivity Checks: "setprice:u28|mult10b:u28_8"
+ 41. Port Connectivity Checks: "setprice:u28|mult10b:u28_7"
+ 42. Port Connectivity Checks: "setprice:u28|mult10b:u28_6"
+ 43. Port Connectivity Checks: "setprice:u28|mult10b:u28_5"
+ 44. Port Connectivity Checks: "setprice:u28|mult10b:u28_4"
+ 45. Port Connectivity Checks: "setprice:u28|mult10b:u28_3"
+ 46. Port Connectivity Checks: "setprice:u28|mult10b:u28_2"
+ 47. Port Connectivity Checks: "settime:u26|mult10b:u25_4"
+ 48. Port Connectivity Checks: "settime:u26|mult10b:u25_3"
+ 49. Port Connectivity Checks: "settime:u26|mult10b:u25_2"
+ 50. Port Connectivity Checks: "separateprice:u17"
+ 51. Port Connectivity Checks: "separateprice:u10"
+ 52. Port Connectivity Checks: "drivetime:u5"
+ 53. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sat Jan 05 14:58:13 2019        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; main                                         ;
+; Top-level Entity Name       ; main                                         ;
+; Family                      ; Cyclone                                      ;
+; Total logic elements        ; 2,448                                        ;
+; Total pins                  ; 41                                           ;
+; Total virtual pins          ; 0                                            ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP1C20F400C8       ;                    ;
+; Top-level entity name                                        ; main               ; main               ;
+; Family name                                                  ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
+; mult10b.vhd                      ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/mult10b.vhd          ;
+; or2total.vhd                     ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/or2total.vhd         ;
+; total_run.vhd                    ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/total_run.vhd        ;
+; drivetime.vhd                    ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/drivetime.vhd        ;
+; state_controller.vhd             ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/state_controller.vhd ;
+; starting_price.vhd               ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/starting_price.vhd   ;
+; settime.vhd                      ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/settime.vhd          ;
+; SetInit.vhd                      ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/SetInit.vhd          ;
+; set_price.vhd                    ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/set_price.vhd        ;
+; remove_jitter.vhd                ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/remove_jitter.vhd    ;
+; unit_price.vhd                   ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/unit_price.vhd       ;
+; hl.vhd                           ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/hl.vhd               ;
+; licheng.vhd                      ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/licheng.vhd          ;
+; main.vhd                         ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/main.vhd             ;
+; delay.vhd                        ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/delay.vhd            ;
+; displaytime.vhd                  ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/displaytime.vhd      ;
+; displaydistance.vhd              ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/displaydistance.vhd  ;
+; displayprice.vhd                 ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/displayprice.vhd     ;
+; countplus.vhd                    ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/countplus.vhd        ;
+; separateprice.vhd                ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/separateprice.vhd    ;
+; separatetime.vhd                 ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/separatetime.vhd     ;
+; lingcheng.vhd                    ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/lingcheng.vhd        ;
+; mult4b.vhd                       ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/mult4b.vhd           ;
+; setprice.vhd                     ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/setprice.vhd         ;
+; or5price.vhd                     ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/or5price.vhd         ;
+; or2time.vhd                      ; yes             ; User VHDL File  ; D:/develop/vhdl_projects/VHDL_taxi-main/or2time.vhd          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 2448  ;
+;     -- Combinational with no register       ; 1492  ;
+;     -- Register only                        ; 102   ;
+;     -- Combinational with a register        ; 854   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 960   ;
+;     -- 3 input functions                    ; 468   ;
+;     -- 2 input functions                    ; 870   ;
+;     -- 1 input functions                    ; 46    ;
+;     -- 0 input functions                    ; 2     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1626  ;
+;     -- arithmetic mode                      ; 822   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 155   ;
+;     -- asynchronous clear/load mode         ; 251   ;
+;                                             ;       ;
+; Total registers                             ; 956   ;
+; Total logic cells in carry chains           ; 884   ;
+; I/O pins                                    ; 41    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 934   ;
+; Total fan-out                               ; 8964  ;
+; Average fan-out                             ; 3.60  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+; |main                      ; 2448 (1)    ; 956          ; 0           ; 41   ; 0            ; 1492 (1)     ; 102 (0)           ; 854 (0)          ; 884 (0)         ; 0 (0)      ; |main                                          ; work         ;
+;    |SetInit:u25|           ; 496 (496)   ; 161          ; 0           ; 0    ; 0            ; 335 (335)    ; 0 (0)             ; 161 (161)        ; 192 (192)       ; 0 (0)      ; |main|SetInit:u25                              ; work         ;
+;    |countplus:u6|          ; 11 (11)     ; 11           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 11 (11)          ; 10 (10)         ; 0 (0)      ; |main|countplus:u6                             ; work         ;
+;    |countplus:u7|          ; 11 (11)     ; 11           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 11 (11)          ; 10 (10)         ; 0 (0)      ; |main|countplus:u7                             ; work         ;
+;    |delay:u3|              ; 23 (23)     ; 16           ; 0           ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 14 (14)          ; 14 (14)         ; 0 (0)      ; |main|delay:u3                                 ; work         ;
+;    |displaydistance:u11|   ; 28 (28)     ; 14           ; 0           ; 0    ; 0            ; 14 (14)      ; 6 (6)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |main|displaydistance:u11                      ; work         ;
+;    |displayprice:u18|      ; 34 (34)     ; 18           ; 0           ; 0    ; 0            ; 16 (16)      ; 8 (8)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |main|displayprice:u18                         ; work         ;
+;    |displaytime:u9|        ; 56 (56)     ; 16           ; 0           ; 0    ; 0            ; 40 (40)      ; 6 (6)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |main|displaytime:u9                           ; work         ;
+;    |drivetime:u5|          ; 36 (36)     ; 11           ; 0           ; 0    ; 0            ; 25 (25)      ; 10 (10)           ; 1 (1)            ; 10 (10)         ; 0 (0)      ; |main|drivetime:u5                             ; work         ;
+;    |hl:u1|                 ; 9 (9)       ; 5            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |main|hl:u1                                    ; work         ;
+;    |licheng:u2|            ; 155 (155)   ; 23           ; 0           ; 0    ; 0            ; 132 (132)    ; 0 (0)             ; 23 (23)          ; 34 (34)         ; 0 (0)      ; |main|licheng:u2                               ; work         ;
+;    |lingcheng:u13|         ; 55 (55)     ; 18           ; 0           ; 0    ; 0            ; 37 (37)      ; 0 (0)             ; 18 (18)          ; 17 (17)         ; 0 (0)      ; |main|lingcheng:u13                            ; work         ;
+;    |or2time:u30|           ; 65 (65)     ; 0            ; 0           ; 0    ; 0            ; 65 (65)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or2time:u30                              ; work         ;
+;    |or2total:u16|          ; 48 (48)     ; 0            ; 0           ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or2total:u16                             ; work         ;
+;    |or5price:u29|          ; 37 (37)     ; 0            ; 0           ; 0    ; 0            ; 37 (37)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or5price:u29                             ; work         ;
+;    |remove_jitter:u19|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u19                        ; work         ;
+;    |remove_jitter:u20|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u20                        ; work         ;
+;    |remove_jitter:u21|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u21                        ; work         ;
+;    |remove_jitter:u22|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u22                        ; work         ;
+;    |remove_jitter:u23|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u23                        ; work         ;
+;    |remove_jitter:u24|     ; 7 (7)       ; 5            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |main|remove_jitter:u24                        ; work         ;
+;    |separateprice:u10|     ; 66 (66)     ; 46           ; 0           ; 0    ; 0            ; 20 (20)      ; 16 (16)           ; 30 (30)          ; 29 (29)         ; 0 (0)      ; |main|separateprice:u10                        ; work         ;
+;    |separateprice:u17|     ; 68 (68)     ; 46           ; 0           ; 0    ; 0            ; 22 (22)      ; 16 (16)           ; 30 (30)          ; 32 (32)         ; 0 (0)      ; |main|separateprice:u17                        ; work         ;
+;    |separatetime:u8|       ; 63 (63)     ; 43           ; 0           ; 0    ; 0            ; 20 (20)      ; 16 (16)           ; 27 (27)          ; 26 (26)         ; 0 (0)      ; |main|separatetime:u8                          ; work         ;
+;    |set_price:u27|         ; 808 (808)   ; 325          ; 0           ; 0    ; 0            ; 483 (483)    ; 0 (0)             ; 325 (325)        ; 320 (320)       ; 0 (0)      ; |main|set_price:u27                            ; work         ;
+;    |setprice:u28|          ; 100 (80)    ; 80           ; 0           ; 0    ; 0            ; 20 (0)       ; 5 (5)             ; 75 (75)          ; 35 (35)         ; 0 (0)      ; |main|setprice:u28                             ; work         ;
+;       |mult10b:u28_10|     ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_10              ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_10|mult4b:u25_1 ; work         ;
+;       |mult10b:u28_13|     ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_13              ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_13|mult4b:u25_1 ; work         ;
+;       |mult10b:u28_16|     ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_16              ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_16|mult4b:u25_1 ; work         ;
+;       |mult10b:u28_4|      ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_4               ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_4|mult4b:u25_1  ; work         ;
+;       |mult10b:u28_7|      ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_7               ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|setprice:u28|mult10b:u28_7|mult4b:u25_1  ; work         ;
+;    |settime:u26|           ; 69 (38)     ; 22           ; 0           ; 0    ; 0            ; 47 (16)      ; 14 (14)           ; 8 (8)            ; 39 (24)         ; 0 (0)      ; |main|settime:u26                              ; work         ;
+;       |mult10b:u25_2|      ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|settime:u26|mult10b:u25_2                ; work         ;
+;          |mult4b:u25_1|    ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|settime:u26|mult10b:u25_2|mult4b:u25_1   ; work         ;
+;       |mult10b:u25_3|      ; 15 (0)      ; 0            ; 0           ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 10 (0)          ; 0 (0)      ; |main|settime:u26|mult10b:u25_3                ; work         ;
+;          |mult4b:u25_1|    ; 15 (15)     ; 0            ; 0           ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 10 (10)         ; 0 (0)      ; |main|settime:u26|mult10b:u25_3|mult4b:u25_1   ; work         ;
+;       |mult10b:u25_4|      ; 12 (0)      ; 0            ; 0           ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |main|settime:u26|mult10b:u25_4                ; work         ;
+;          |mult4b:u25_1|    ; 12 (12)     ; 0            ; 0           ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |main|settime:u26|mult10b:u25_4|mult4b:u25_1   ; work         ;
+;    |starting_price:u14|    ; 9 (9)       ; 0            ; 0           ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|starting_price:u14                       ; work         ;
+;    |state_controller:u12|  ; 18 (18)     ; 4            ; 0           ; 0    ; 0            ; 14 (14)      ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|state_controller:u12                     ; work         ;
+;    |total_run:u4|          ; 19 (19)     ; 14           ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 14 (14)          ; 13 (13)         ; 0 (0)      ; |main|total_run:u4                             ; work         ;
+;    |unit_price:u15|        ; 121 (121)   ; 42           ; 0           ; 0    ; 0            ; 79 (79)      ; 0 (0)             ; 42 (42)          ; 74 (74)         ; 0 (0)      ; |main|unit_price:u15                           ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|state_controller:u12|current_state                                                                                                         ;
++-------------------------------------+-------------------------------------+-------------------------------------+---------------------------+--------------------+
+; Name                                ; current_state.beyond_starting_price ; current_state.within_starting_price ; current_state.start_reset ; current_state.stop ;
++-------------------------------------+-------------------------------------+-------------------------------------+---------------------------+--------------------+
+; current_state.stop                  ; 0                                   ; 0                                   ; 0                         ; 0                  ;
+; current_state.start_reset           ; 0                                   ; 0                                   ; 1                         ; 1                  ;
+; current_state.within_starting_price ; 0                                   ; 1                                   ; 0                         ; 1                  ;
+; current_state.beyond_starting_price ; 1                                   ; 0                                   ; 0                         ; 1                  ;
++-------------------------------------+-------------------------------------+-------------------------------------+---------------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                        ;
++-----------------------------------------------------------+---------------------------------------+------------------------+
+; Latch Name                                                ; Latch Enable Signal                   ; Free of Timing Hazards ;
++-----------------------------------------------------------+---------------------------------------+------------------------+
+; or2time:u30|rfh[1]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsh[1]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rffen[1]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsfen[1]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsh[2]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rfh[2]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rffen[2]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsfen[2]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsh[3]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rfh[3]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rffen[3]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsfen[3]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rfh[0]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsh[0]                                        ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rffen[0]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|rsfen[0]                                      ; remove_jitter:u19|key_out             ; yes                    ;
+; state_controller:u12|next_state.start_reset_180           ; state_controller:u12|Selector3        ; yes                    ;
+; or2time:u30|rfhtemp[1]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rshtemp[1]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rffentemp[1]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rsfentemp[1]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rshtemp[2]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rfhtemp[2]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rffentemp[2]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rsfentemp[2]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rshtemp[3]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rfhtemp[3]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rffentemp[3]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rsfentemp[3]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rfhtemp[0]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rshtemp[0]                                    ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rffentemp[0]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; or2time:u30|rsfentemp[0]                                  ; or2time:u30|rshtemp[0]~0              ; yes                    ;
+; state_controller:u12|state_start                          ; state_controller:u12|state_start~0    ; yes                    ;
+; or2time:u30|vfhtemp[1]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vshtemp[1]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vffentemp[1]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vsfentemp[1]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vshtemp[2]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vfhtemp[2]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vffentemp[2]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vsfentemp[2]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vshtemp[3]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vfhtemp[3]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vffentemp[3]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vsfentemp[3]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vfhtemp[0]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vshtemp[0]                                    ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vffentemp[0]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2time:u30|vsfentemp[0]                                  ; remove_jitter:u19|key_out             ; yes                    ;
+; or2total:u16|total[13]                                    ; or2total:u16|total[13]~30             ; yes                    ;
+; state_controller:u12|next_state.stop_161                  ; state_controller:u12|Selector3        ; yes                    ;
+; state_controller:u12|next_state.beyond_starting_price_123 ; state_controller:u12|Selector3        ; yes                    ;
+; hl:u1|ceout                                               ; remove_jitter:u19|key_out             ; yes                    ;
+; state_controller:u12|next_state.within_starting_price_142 ; state_controller:u12|Selector3        ; yes                    ;
+; starting_price:u14|total_price[0]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[1]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[2]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[3]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[4]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[5]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[6]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; starting_price:u14|total_price[7]                         ; starting_price:u14|total_price[13]~26 ; yes                    ;
+; or2total:u16|total[12]                                    ; or2total:u16|total[13]~30             ; yes                    ;
+; or2total:u16|total[11]                                    ; or2total:u16|total[13]~30             ; yes                    ;
+; or2total:u16|total[10]                                    ; or2total:u16|total[13]~30             ; yes                    ;
+; or2total:u16|total[9]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or2total:u16|total[8]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or2total:u16|total[7]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[7]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[6]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[6]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[5]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[5]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[4]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[4]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[3]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[3]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[2]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[2]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[1]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[1]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; or2total:u16|total[0]                                     ; or2total:u16|total[13]~30             ; yes                    ;
+; or5price:u29|price[0]                                     ; or5price:u29|price[13]~60             ; yes                    ;
+; Number of user-specified and inferred latches = 84        ;                                       ;                        ;
++-----------------------------------------------------------+---------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; Register name                                 ; Reason for Removal                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; set_price:u27|day_starting_price_t[0..3]      ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_starting_price_h[0..3]      ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|night_starting_price_t[0..3]    ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|night_starting_price_h[0..3]    ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_mileage_price_t[0..3]       ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_mileage_price_h[0..3]       ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_timing_price_t[0..3]        ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_timing_price_h[0..3]        ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_long_distance_price_t[0..3] ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_long_distance_price_h[0..3] ; Stuck at GND due to stuck port data_in                    ;
+; displayprice:u18|li                           ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition5[9..13]               ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_long_distance_price[11..13]  ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition4[9..13]               ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition3[9..13]               ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition2[9..13]               ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition1[9..13]               ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_long_distance_price[9..10]   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_mileage_price[9..13]         ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|night_starting_price[9..13]      ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_starting_price[9..13]        ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_timing_price[9..13]          ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition5[8]                   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition4[8]                   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition3[8]                   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition2[8]                   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|transition1[8]                   ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_long_distance_price[8]       ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_mileage_price[8]             ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|night_starting_price[8]          ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_starting_price[8]            ; Stuck at GND due to stuck port data_in                    ;
+; setprice:u28|day_timing_price[8]              ; Stuck at GND due to stuck port data_in                    ;
+; set_price:u27|day_timing_price_y[3]           ; Merged with set_price:u27|day_timing_price_yuan[3]        ;
+; set_price:u27|day_timing_price_y[2]           ; Merged with set_price:u27|day_timing_price_yuan[2]        ;
+; set_price:u27|day_timing_price_y[1]           ; Merged with set_price:u27|day_timing_price_yuan[1]        ;
+; set_price:u27|day_timing_price_y[0]           ; Merged with set_price:u27|day_timing_price_yuan[0]        ;
+; set_price:u27|day_long_distance_price_j[3]    ; Merged with set_price:u27|day_long_distance_price_jiao[3] ;
+; set_price:u27|day_long_distance_price_j[2]    ; Merged with set_price:u27|day_long_distance_price_jiao[2] ;
+; set_price:u27|day_long_distance_price_j[1]    ; Merged with set_price:u27|day_long_distance_price_jiao[1] ;
+; set_price:u27|day_long_distance_price_j[0]    ; Merged with set_price:u27|day_long_distance_price_jiao[0] ;
+; set_price:u27|day_long_distance_price_y[3]    ; Merged with set_price:u27|day_long_distance_price_yuan[3] ;
+; set_price:u27|day_long_distance_price_y[2]    ; Merged with set_price:u27|day_long_distance_price_yuan[2] ;
+; set_price:u27|day_long_distance_price_y[1]    ; Merged with set_price:u27|day_long_distance_price_yuan[1] ;
+; set_price:u27|day_long_distance_price_y[0]    ; Merged with set_price:u27|day_long_distance_price_yuan[0] ;
+; set_price:u27|price_sel[30]                   ; Merged with set_price:u27|pricesel[30]                    ;
+; set_price:u27|price_sel[29]                   ; Merged with set_price:u27|pricesel[29]                    ;
+; set_price:u27|price_sel[28]                   ; Merged with set_price:u27|pricesel[28]                    ;
+; set_price:u27|price_sel[27]                   ; Merged with set_price:u27|pricesel[27]                    ;
+; set_price:u27|price_sel[26]                   ; Merged with set_price:u27|pricesel[26]                    ;
+; set_price:u27|price_sel[25]                   ; Merged with set_price:u27|pricesel[25]                    ;
+; set_price:u27|price_sel[24]                   ; Merged with set_price:u27|pricesel[24]                    ;
+; set_price:u27|price_sel[23]                   ; Merged with set_price:u27|pricesel[23]                    ;
+; set_price:u27|price_sel[22]                   ; Merged with set_price:u27|pricesel[22]                    ;
+; set_price:u27|price_sel[21]                   ; Merged with set_price:u27|pricesel[21]                    ;
+; set_price:u27|price_sel[20]                   ; Merged with set_price:u27|pricesel[20]                    ;
+; set_price:u27|price_sel[19]                   ; Merged with set_price:u27|pricesel[19]                    ;
+; set_price:u27|price_sel[18]                   ; Merged with set_price:u27|pricesel[18]                    ;
+; set_price:u27|price_sel[17]                   ; Merged with set_price:u27|pricesel[17]                    ;
+; set_price:u27|price_sel[16]                   ; Merged with set_price:u27|pricesel[16]                    ;
+; set_price:u27|price_sel[15]                   ; Merged with set_price:u27|pricesel[15]                    ;
+; set_price:u27|price_sel[14]                   ; Merged with set_price:u27|pricesel[14]                    ;
+; set_price:u27|price_sel[13]                   ; Merged with set_price:u27|pricesel[13]                    ;
+; set_price:u27|price_sel[12]                   ; Merged with set_price:u27|pricesel[12]                    ;
+; set_price:u27|price_sel[11]                   ; Merged with set_price:u27|pricesel[11]                    ;
+; set_price:u27|price_sel[10]                   ; Merged with set_price:u27|pricesel[10]                    ;
+; set_price:u27|price_sel[9]                    ; Merged with set_price:u27|pricesel[9]                     ;
+; set_price:u27|price_sel[8]                    ; Merged with set_price:u27|pricesel[8]                     ;
+; set_price:u27|price_sel[7]                    ; Merged with set_price:u27|pricesel[7]                     ;
+; set_price:u27|price_sel[6]                    ; Merged with set_price:u27|pricesel[6]                     ;
+; set_price:u27|price_sel[5]                    ; Merged with set_price:u27|pricesel[5]                     ;
+; set_price:u27|price_sel[4]                    ; Merged with set_price:u27|pricesel[4]                     ;
+; set_price:u27|price_sel[3]                    ; Merged with set_price:u27|pricesel[3]                     ;
+; set_price:u27|price_sel[2]                    ; Merged with set_price:u27|pricesel[2]                     ;
+; set_price:u27|price_sel[1]                    ; Merged with set_price:u27|pricesel[1]                     ;
+; set_price:u27|day_starting_price_jiao[3]      ; Merged with set_price:u27|day_starting_price_j[3]         ;
+; set_price:u27|day_starting_price_jiao[2]      ; Merged with set_price:u27|day_starting_price_j[2]         ;
+; set_price:u27|day_starting_price_jiao[1]      ; Merged with set_price:u27|day_starting_price_j[1]         ;
+; set_price:u27|day_starting_price_jiao[0]      ; Merged with set_price:u27|day_starting_price_j[0]         ;
+; set_price:u27|day_starting_price_yuan[3]      ; Merged with set_price:u27|day_starting_price_y[3]         ;
+; set_price:u27|day_starting_price_yuan[2]      ; Merged with set_price:u27|day_starting_price_y[2]         ;
+; set_price:u27|day_starting_price_yuan[1]      ; Merged with set_price:u27|day_starting_price_y[1]         ;
+; set_price:u27|day_starting_price_yuan[0]      ; Merged with set_price:u27|day_starting_price_y[0]         ;
+; set_price:u27|night_starting_price_jiao[3]    ; Merged with set_price:u27|night_starting_price_j[3]       ;
+; set_price:u27|night_starting_price_jiao[2]    ; Merged with set_price:u27|night_starting_price_j[2]       ;
+; set_price:u27|night_starting_price_jiao[1]    ; Merged with set_price:u27|night_starting_price_j[1]       ;
+; set_price:u27|night_starting_price_jiao[0]    ; Merged with set_price:u27|night_starting_price_j[0]       ;
+; set_price:u27|night_starting_price_yuan[3]    ; Merged with set_price:u27|night_starting_price_y[3]       ;
+; set_price:u27|night_starting_price_yuan[2]    ; Merged with set_price:u27|night_starting_price_y[2]       ;
+; set_price:u27|night_starting_price_yuan[1]    ; Merged with set_price:u27|night_starting_price_y[1]       ;
+; set_price:u27|night_starting_price_yuan[0]    ; Merged with set_price:u27|night_starting_price_y[0]       ;
+; set_price:u27|day_mileage_price_jiao[3]       ; Merged with set_price:u27|day_mileage_price_j[3]          ;
+; set_price:u27|day_mileage_price_jiao[2]       ; Merged with set_price:u27|day_mileage_price_j[2]          ;
+; set_price:u27|day_mileage_price_jiao[1]       ; Merged with set_price:u27|day_mileage_price_j[1]          ;
+; set_price:u27|day_mileage_price_jiao[0]       ; Merged with set_price:u27|day_mileage_price_j[0]          ;
+; set_price:u27|day_mileage_price_yuan[3]       ; Merged with set_price:u27|day_mileage_price_y[3]          ;
+; set_price:u27|day_mileage_price_yuan[2]       ; Merged with set_price:u27|day_mileage_price_y[2]          ;
+; set_price:u27|day_mileage_price_yuan[1]       ; Merged with set_price:u27|day_mileage_price_y[1]          ;
+; set_price:u27|day_mileage_price_yuan[0]       ; Merged with set_price:u27|day_mileage_price_y[0]          ;
+; set_price:u27|day_timing_price_jiao[3]        ; Merged with set_price:u27|day_timing_price_j[3]           ;
+; set_price:u27|day_timing_price_jiao[2]        ; Merged with set_price:u27|day_timing_price_j[2]           ;
+; Total Number of Removed Registers = 248       ;                                                           ;
++-----------------------------------------------+-----------------------------------------------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                  ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; set_price:u27|day_starting_price_t[3]      ; Stuck at GND              ; setprice:u28|transition1[9], setprice:u28|transition1[10],                          ;
+;                                            ; due to stuck port data_in ; setprice:u28|transition1[11], setprice:u28|transition1[12],                         ;
+;                                            ;                           ; setprice:u28|transition1[13], setprice:u28|day_starting_price[9],                   ;
+;                                            ;                           ; setprice:u28|day_starting_price[10], setprice:u28|day_starting_price[11],           ;
+;                                            ;                           ; setprice:u28|day_starting_price[12], setprice:u28|day_starting_price[13],           ;
+;                                            ;                           ; setprice:u28|transition1[8], setprice:u28|day_starting_price[8]                     ;
+; set_price:u27|night_starting_price_t[3]    ; Stuck at GND              ; setprice:u28|transition2[9], setprice:u28|transition2[10],                          ;
+;                                            ; due to stuck port data_in ; setprice:u28|transition2[11], setprice:u28|transition2[12],                         ;
+;                                            ;                           ; setprice:u28|transition2[13], setprice:u28|night_starting_price[9],                 ;
+;                                            ;                           ; setprice:u28|night_starting_price[10], setprice:u28|night_starting_price[11],       ;
+;                                            ;                           ; setprice:u28|night_starting_price[12], setprice:u28|night_starting_price[13],       ;
+;                                            ;                           ; setprice:u28|transition2[8], setprice:u28|night_starting_price[8]                   ;
+; set_price:u27|day_mileage_price_t[3]       ; Stuck at GND              ; setprice:u28|transition3[9], setprice:u28|transition3[10],                          ;
+;                                            ; due to stuck port data_in ; setprice:u28|transition3[11], setprice:u28|transition3[12],                         ;
+;                                            ;                           ; setprice:u28|transition3[13], setprice:u28|day_mileage_price[9],                    ;
+;                                            ;                           ; setprice:u28|day_mileage_price[10], setprice:u28|day_mileage_price[11],             ;
+;                                            ;                           ; setprice:u28|day_mileage_price[12], setprice:u28|day_mileage_price[13],             ;
+;                                            ;                           ; setprice:u28|transition3[8], setprice:u28|day_mileage_price[8]                      ;
+; set_price:u27|day_timing_price_t[3]        ; Stuck at GND              ; setprice:u28|transition4[9], setprice:u28|transition4[10],                          ;
+;                                            ; due to stuck port data_in ; setprice:u28|transition4[11], setprice:u28|transition4[12],                         ;
+;                                            ;                           ; setprice:u28|transition4[13], setprice:u28|day_timing_price[13],                    ;
+;                                            ;                           ; setprice:u28|day_timing_price[12], setprice:u28|day_timing_price[11],               ;
+;                                            ;                           ; setprice:u28|day_timing_price[10], setprice:u28|day_timing_price[9],                ;
+;                                            ;                           ; setprice:u28|transition4[8], setprice:u28|day_timing_price[8]                       ;
+; set_price:u27|day_long_distance_price_t[3] ; Stuck at GND              ; setprice:u28|transition5[13], setprice:u28|transition5[12],                         ;
+;                                            ; due to stuck port data_in ; setprice:u28|transition5[11], setprice:u28|transition5[10],                         ;
+;                                            ;                           ; setprice:u28|transition5[9], setprice:u28|day_long_distance_price[13],              ;
+;                                            ;                           ; setprice:u28|day_long_distance_price[12], setprice:u28|day_long_distance_price[11], ;
+;                                            ;                           ; setprice:u28|day_long_distance_price[10], setprice:u28|day_long_distance_price[9],  ;
+;                                            ;                           ; setprice:u28|transition5[8], setprice:u28|day_long_distance_price[8]                ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 956   ;
+; Number of registers using Synchronous Clear  ; 107   ;
+; Number of registers using Synchronous Load   ; 48    ;
+; Number of registers using Asynchronous Clear ; 250   ;
+; Number of registers using Asynchronous Load  ; 1     ;
+; Number of registers using Clock Enable       ; 435   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; displaytime:u9|outp[0]                  ; 2       ;
+; displaytime:u9|outp[1]                  ; 2       ;
+; displaytime:u9|outp[2]                  ; 2       ;
+; displaytime:u9|outp[3]                  ; 2       ;
+; displaytime:u9|outp[4]                  ; 2       ;
+; displaytime:u9|outp[5]                  ; 2       ;
+; displaydistance:u11|outp[0]             ; 1       ;
+; displaydistance:u11|outp[1]             ; 1       ;
+; displaydistance:u11|outp[2]             ; 1       ;
+; displaydistance:u11|outp[3]             ; 1       ;
+; displaydistance:u11|outp[4]             ; 1       ;
+; displaydistance:u11|outp[5]             ; 1       ;
+; displayprice:u18|outp[0]                ; 1       ;
+; displayprice:u18|outp[1]                ; 1       ;
+; displayprice:u18|outp[2]                ; 1       ;
+; displayprice:u18|outp[3]                ; 1       ;
+; displayprice:u18|outp[4]                ; 1       ;
+; displayprice:u18|outp[5]                ; 1       ;
+; set_price:u27|pricesel[0]               ; 12      ;
+; set_price:u27|pricesel[31]              ; 6       ;
+; Total number of inverted registers = 20 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |main|SetInit:u25|bit_sel[10]                        ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|total_price[3]                  ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u25|d[14]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u25|c[21]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u25|a[14]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |main|SetInit:u25|b[4]                               ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_starting_price_jiao[21]      ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|night_starting_price_jiao[24]    ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_starting_price_yuan[11]      ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|night_starting_price_yuan[22]    ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_long_distance_price_jiao[23] ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_long_distance_price_yuan[11] ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_timing_price_jiao[4]         ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_timing_price_yuan[25]        ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_mileage_price_jiao[17]       ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u27|day_mileage_price_yuan[6]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |main|displaytime:u9|sel[0]                          ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |main|total_run:u4|run[7]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|licheng:u2|twenty[3]                           ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |main|set_price:u27|pricesel[28]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combd[0]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combc[0]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combb[0]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combd[2]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combc[3]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combb[3]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combd[1]                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combc[3]                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combb[3]                       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|timing_price_sum[4]             ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|mileage_price_sum[7]            ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |main|lingcheng:u13|mins[0]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separateprice:u10|comba[3]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separateprice:u17|comba[3]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separatetime:u8|comba[1]                       ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 11 LEs               ; 22 LEs                 ; Yes        ; |main|separatetime:u8|comb[3]                        ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |main|licheng:u2|run[9]                              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|lingcheng:u13|time[5]                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u25|min_f[3]                           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u25|min_s[0]                           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u25|a[0]                               ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|SetInit:u25|hour_f[0]                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_starting_price_j[0]          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|night_starting_price_j[0]        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_starting_price_y[2]          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|night_starting_price_y[2]        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_long_distance_price_jiao[1]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_long_distance_price_yuan[0]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_timing_price_j[1]            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_timing_price_yuan[1]         ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_mileage_price_j[2]           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u27|day_mileage_price_y[3]           ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|licheng:u2|twenty[1]                           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|licheng:u2|twofive[0]                          ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |main|displaydistance:u11|outp[3]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |main|set_price:u27|pricesel[31]                     ;
+; 27:1               ; 6 bits    ; 108 LEs       ; 78 LEs               ; 30 LEs                 ; Yes        ; |main|displayprice:u18|outp[3]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |main|or2total:u16|total[2]~5                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|set_price:u27|price_sel~41                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u25|bit_sel~32                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u25|b~41                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|unit_price:u15|Add3                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|unit_price:u15|Add3                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twenty~16                           ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |main|displaytime:u9|Mux6                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twenty~19                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twofive~22                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main|or5price:u29|price[6]~34                       ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; No         ; |main|licheng:u2|run~46                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |main|licheng:u2|twenty~34                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_2|mult4b:u25_1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_3|mult4b:u25_1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: settime:u26|mult10b:u25_4|mult4b:u25_1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_2|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_3|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_4|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_5|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_6|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_7|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_8|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_9|mult4b:u25_1 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_10|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_11|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_12|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_13|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_14|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_15|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: setprice:u28|mult10b:u28_16|mult4b:u25_1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; s              ; 10    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_16" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[2]    ; Input ; Info     ; Stuck at GND              ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[0]    ; Input ; Info     ; Stuck at GND              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_15" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[6..5] ; Input ; Info     ; Stuck at VCC              ;
+; d2[9..7] ; Input ; Info     ; Stuck at GND              ;
+; d2[4..3] ; Input ; Info     ; Stuck at GND              ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND              ;
+; d2[2]    ; Input ; Info     ; Stuck at VCC              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_14" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[9..5] ; Input ; Info     ; Stuck at VCC              ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND              ;
+; d2[4]    ; Input ; Info     ; Stuck at GND              ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_13" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[2]    ; Input ; Info     ; Stuck at GND              ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[0]    ; Input ; Info     ; Stuck at GND              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_12" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[6..5] ; Input ; Info     ; Stuck at VCC              ;
+; d2[9..7] ; Input ; Info     ; Stuck at GND              ;
+; d2[4..3] ; Input ; Info     ; Stuck at GND              ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND              ;
+; d2[2]    ; Input ; Info     ; Stuck at VCC              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_11" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[9..5] ; Input ; Info     ; Stuck at VCC              ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND              ;
+; d2[4]    ; Input ; Info     ; Stuck at GND              ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC              ;
++----------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_10" ;
++----------+-------+----------+---------------------------+
+; Port     ; Type  ; Severity ; Details                   ;
++----------+-------+----------+---------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND              ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[2]    ; Input ; Info     ; Stuck at GND              ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC              ;
+; d2[0]    ; Input ; Info     ; Stuck at GND              ;
++----------+-------+----------+---------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_9" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[6..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[9..7] ; Input ; Info     ; Stuck at GND             ;
+; d2[4..3] ; Input ; Info     ; Stuck at GND             ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[2]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_8" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[9..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[4]    ; Input ; Info     ; Stuck at GND             ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_7" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC             ;
+; d2[2]    ; Input ; Info     ; Stuck at GND             ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC             ;
+; d2[0]    ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_6" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[6..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[9..7] ; Input ; Info     ; Stuck at GND             ;
+; d2[4..3] ; Input ; Info     ; Stuck at GND             ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[2]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_5" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[9..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[4]    ; Input ; Info     ; Stuck at GND             ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_4" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC             ;
+; d2[2]    ; Input ; Info     ; Stuck at GND             ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC             ;
+; d2[0]    ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_3" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[6..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[9..7] ; Input ; Info     ; Stuck at GND             ;
+; d2[4..3] ; Input ; Info     ; Stuck at GND             ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[2]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "setprice:u28|mult10b:u28_2" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND             ;
+; d2[9..5] ; Input ; Info     ; Stuck at VCC             ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND             ;
+; d2[4]    ; Input ; Info     ; Stuck at GND             ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC             ;
++----------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "settime:u26|mult10b:u25_4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND            ;
+; d2[4..3] ; Input ; Info     ; Stuck at VCC            ;
+; d2[8..7] ; Input ; Info     ; Stuck at GND            ;
+; d2[2..0] ; Input ; Info     ; Stuck at GND            ;
+; d2[9]    ; Input ; Info     ; Stuck at VCC            ;
+; d2[6]    ; Input ; Info     ; Stuck at VCC            ;
+; d2[5]    ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "settime:u26|mult10b:u25_3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND            ;
+; d2[5..2] ; Input ; Info     ; Stuck at VCC            ;
+; d2[9..6] ; Input ; Info     ; Stuck at GND            ;
+; d2[1..0] ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "settime:u26|mult10b:u25_2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; d1[9..4] ; Input ; Info     ; Stuck at GND            ;
+; d2[9..4] ; Input ; Info     ; Stuck at GND            ;
+; d2[3]    ; Input ; Info     ; Stuck at VCC            ;
+; d2[2]    ; Input ; Info     ; Stuck at GND            ;
+; d2[1]    ; Input ; Info     ; Stuck at VCC            ;
+; d2[0]    ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "separateprice:u17"                                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wan  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "separateprice:u10"                                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; total[13..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dout          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wan           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "drivetime:u5"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; tenout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Jan 05 14:57:58 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Info: Found 2 design units, including 1 entities, in source file mult10b.vhd
+    Info: Found design unit 1: mult10b-bhv
+    Info: Found entity 1: mult10b
+Info: Found 2 design units, including 1 entities, in source file or2total.vhd
+    Info: Found design unit 1: or2total-one
+    Info: Found entity 1: or2total
+Info: Found 2 design units, including 1 entities, in source file total_run.vhd
+    Info: Found design unit 1: total_run-totalrun
+    Info: Found entity 1: total_run
+Info: Found 2 design units, including 1 entities, in source file drivetime.vhd
+    Info: Found design unit 1: drivetime-one
+    Info: Found entity 1: drivetime
+Info: Found 2 design units, including 1 entities, in source file state_controller.vhd
+    Info: Found design unit 1: state_controller-control
+    Info: Found entity 1: state_controller
+Info: Found 2 design units, including 1 entities, in source file starting_price.vhd
+    Info: Found design unit 1: starting_price-start
+    Info: Found entity 1: starting_price
+Info: Found 2 design units, including 1 entities, in source file settime.vhd
+    Info: Found design unit 1: settime-time
+    Info: Found entity 1: settime
+Info: Found 2 design units, including 1 entities, in source file SetInit.vhd
+    Info: Found design unit 1: SetInit-set
+    Info: Found entity 1: SetInit
+Info: Found 2 design units, including 1 entities, in source file set_price.vhd
+    Info: Found design unit 1: set_price-price
+    Info: Found entity 1: set_price
+Info: Found 2 design units, including 1 entities, in source file remove_jitter.vhd
+    Info: Found design unit 1: remove_jitter-bhv
+    Info: Found entity 1: remove_jitter
+Info: Found 2 design units, including 1 entities, in source file unit_price.vhd
+    Info: Found design unit 1: unit_price-unit
+    Info: Found entity 1: unit_price
+Info: Found 2 design units, including 1 entities, in source file hl.vhd
+    Info: Found design unit 1: hl-one
+    Info: Found entity 1: hl
+Info: Found 2 design units, including 1 entities, in source file licheng.vhd
+    Info: Found design unit 1: licheng-one
+    Info: Found entity 1: licheng
+Info: Found 2 design units, including 1 entities, in source file main.vhd
+    Info: Found design unit 1: main-one
+    Info: Found entity 1: main
+Info: Found 2 design units, including 1 entities, in source file delay.vhd
+    Info: Found design unit 1: delay-one
+    Info: Found entity 1: delay
+Info: Found 2 design units, including 1 entities, in source file displaytime.vhd
+    Info: Found design unit 1: displaytime-one
+    Info: Found entity 1: displaytime
+Info: Found 2 design units, including 1 entities, in source file displaydistance.vhd
+    Info: Found design unit 1: displaydistance-one
+    Info: Found entity 1: displaydistance
+Info: Found 2 design units, including 1 entities, in source file displayprice.vhd
+    Info: Found design unit 1: displayprice-one
+    Info: Found entity 1: displayprice
+Info: Found 2 design units, including 1 entities, in source file countplus.vhd
+    Info: Found design unit 1: countplus-one
+    Info: Found entity 1: countplus
+Info: Found 2 design units, including 1 entities, in source file separateprice.vhd
+    Info: Found design unit 1: separateprice-one
+    Info: Found entity 1: separateprice
+Info: Found 2 design units, including 1 entities, in source file separatetime.vhd
+    Info: Found design unit 1: separatetime-one
+    Info: Found entity 1: separatetime
+Info: Found 2 design units, including 1 entities, in source file lingcheng.vhd
+    Info: Found design unit 1: lingcheng-one
+    Info: Found entity 1: lingcheng
+Warning: Entity "mult4b" obtained from "D:/develop/vhdl_projects/VHDL_taxi-main/mult4b.vhd" instead of from Quartus II megafunction library
+Info: Found 2 design units, including 1 entities, in source file mult4b.vhd
+    Info: Found design unit 1: mult4b-one
+    Info: Found entity 1: mult4b
+Info: Found 2 design units, including 1 entities, in source file setprice.vhd
+    Info: Found design unit 1: setprice-setprice
+    Info: Found entity 1: setprice
+Info: Found 2 design units, including 1 entities, in source file or5price.vhd
+    Info: Found design unit 1: or5price-one
+    Info: Found entity 1: or5price
+Info: Found 2 design units, including 1 entities, in source file or2time.vhd
+    Info: Found design unit 1: or2time-one
+    Info: Found entity 1: or2time
+Info: Elaborating entity "main" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(371): object "net9" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at main.vhd(375): used implicit default value for signal "net20" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info: Elaborating entity "hl" for hierarchy "hl:u1"
+Warning (10492): VHDL Process Statement warning at hl.vhd(29): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at hl.vhd(26): inferring latch(es) for signal or variable "ceout", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ceout" at hl.vhd(26)
+Info: Elaborating entity "licheng" for hierarchy "licheng:u2"
+Warning (10492): VHDL Process Statement warning at licheng.vhd(43): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at licheng.vhd(45): signal "ce" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "delay" for hierarchy "delay:u3"
+Warning (10492): VHDL Process Statement warning at delay.vhd(32): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "total_run" for hierarchy "total_run:u4"
+Warning (10492): VHDL Process Statement warning at total_run.vhd(37): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at total_run.vhd(39): signal "ce" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "drivetime" for hierarchy "drivetime:u5"
+Warning (10492): VHDL Process Statement warning at drivetime.vhd(31): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "countplus" for hierarchy "countplus:u6"
+Warning (10492): VHDL Process Statement warning at countplus.vhd(28): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "separatetime" for hierarchy "separatetime:u8"
+Warning (10492): VHDL Process Statement warning at separatetime.vhd(26): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at separatetime.vhd(28): signal "ce" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "displaytime" for hierarchy "displaytime:u9"
+Warning (10492): VHDL Process Statement warning at displaytime.vhd(34): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "separateprice" for hierarchy "separateprice:u10"
+Warning (10541): VHDL Signal Declaration warning at separateprice.vhd(12): used implicit default value for signal "dout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at separateprice.vhd(27): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at separateprice.vhd(29): signal "ce" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "displaydistance" for hierarchy "displaydistance:u11"
+Warning (10492): VHDL Process Statement warning at displaydistance.vhd(31): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "state_controller" for hierarchy "state_controller:u12"
+Warning (10492): VHDL Process Statement warning at state_controller.vhd(50): signal "state_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at state_controller.vhd(53): signal "state_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at state_controller.vhd(56): signal "state_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at state_controller.vhd(65): signal "state_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at state_controller.vhd(36): inferring latch(es) for signal or variable "state_start", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at state_controller.vhd(36): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_state.beyond_starting_price" at state_controller.vhd(36)
+Info (10041): Inferred latch for "next_state.within_starting_price" at state_controller.vhd(36)
+Info (10041): Inferred latch for "next_state.stop" at state_controller.vhd(36)
+Info (10041): Inferred latch for "next_state.start_reset" at state_controller.vhd(36)
+Info (10041): Inferred latch for "state_start" at state_controller.vhd(36)
+Info: Elaborating entity "lingcheng" for hierarchy "lingcheng:u13"
+Info: Elaborating entity "starting_price" for hierarchy "starting_price:u14"
+Warning (10492): VHDL Process Statement warning at starting_price.vhd(36): signal "day_starting_price" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at starting_price.vhd(38): signal "night_starting_price" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at starting_price.vhd(29): inferring latch(es) for signal or variable "total_price", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "total_price[0]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[1]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[2]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[3]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[4]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[5]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[6]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[7]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[8]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[9]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[10]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[11]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[12]" at starting_price.vhd(29)
+Info (10041): Inferred latch for "total_price[13]" at starting_price.vhd(29)
+Info: Elaborating entity "unit_price" for hierarchy "unit_price:u15"
+Warning (10812): VHDL warning at unit_price.vhd(54): sensitivity list already contains state_pricing
+Info: Elaborating entity "or2total" for hierarchy "or2total:u16"
+Warning (10492): VHDL Process Statement warning at or2total.vhd(26): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2total.vhd(28): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2total.vhd(30): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2total.vhd(31): signal "price" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at or2total.vhd(23): inferring latch(es) for signal or variable "total", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "total[0]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[1]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[2]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[3]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[4]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[5]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[6]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[7]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[8]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[9]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[10]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[11]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[12]" at or2total.vhd(23)
+Info (10041): Inferred latch for "total[13]" at or2total.vhd(23)
+Info: Elaborating entity "displayprice" for hierarchy "displayprice:u18"
+Warning (10492): VHDL Process Statement warning at displayprice.vhd(33): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "remove_jitter" for hierarchy "remove_jitter:u19"
+Warning (10540): VHDL Signal Declaration warning at remove_jitter.vhd(24): used explicit default value for signal "N" because signal was never assigned a value
+Info: Elaborating entity "SetInit" for hierarchy "SetInit:u25"
+Info: Elaborating entity "settime" for hierarchy "settime:u26"
+Warning (10540): VHDL Signal Declaration warning at settime.vhd(34): used explicit default value for signal "ten" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at settime.vhd(35): used explicit default value for signal "sixty" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at settime.vhd(36): used explicit default value for signal "six_hundreds" because signal was never assigned a value
+Info: Elaborating entity "mult10b" for hierarchy "settime:u26|mult10b:u25_2"
+Info: Elaborating entity "mult4b" for hierarchy "settime:u26|mult10b:u25_2|mult4b:u25_1"
+Warning (10492): VHDL Process Statement warning at mult4b.vhd(22): signal "a0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "set_price" for hierarchy "set_price:u27"
+Info: Elaborating entity "setprice" for hierarchy "setprice:u28"
+Warning (10540): VHDL Signal Declaration warning at setprice.vhd(46): used explicit default value for signal "ten" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at setprice.vhd(47): used explicit default value for signal "hundred" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at setprice.vhd(48): used explicit default value for signal "thousand" because signal was never assigned a value
+Info: Elaborating entity "or5price" for hierarchy "or5price:u29"
+Warning (10492): VHDL Process Statement warning at or5price.vhd(26): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or5price.vhd(28): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or5price.vhd(30): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or5price.vhd(32): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or5price.vhd(34): signal "pricesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at or5price.vhd(23): inferring latch(es) for signal or variable "price", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "price[0]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[1]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[2]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[3]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[4]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[5]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[6]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[7]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[8]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[9]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[10]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[11]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[12]" at or5price.vhd(23)
+Info (10041): Inferred latch for "price[13]" at or5price.vhd(23)
+Info: Elaborating entity "or2time" for hierarchy "or2time:u30"
+Warning (10492): VHDL Process Statement warning at or2time.vhd(32): signal "timesel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(33): signal "vffentemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(34): signal "vsfentemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(35): signal "vfhtemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(36): signal "vshtemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(37): signal "rffentemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(38): signal "rsfentemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(39): signal "rfhtemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at or2time.vhd(40): signal "rshtemp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "vffentemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "vsfentemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "vfhtemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "vshtemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rffentemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rsfentemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rfhtemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rshtemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rffen", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rsfen", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rfh", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at or2time.vhd(25): inferring latch(es) for signal or variable "rsh", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "rsh[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsh[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsh[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsh[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfh[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfh[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfh[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfh[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfen[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfen[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfen[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfen[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffen[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffen[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffen[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffen[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rshtemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rshtemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rshtemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rshtemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfhtemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfhtemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfhtemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rfhtemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfentemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfentemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfentemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rsfentemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffentemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffentemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffentemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "rffentemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vshtemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vshtemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vshtemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vshtemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vfhtemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vfhtemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vfhtemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vfhtemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vsfentemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vsfentemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vsfentemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vsfentemp[3]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vffentemp[0]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vffentemp[1]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vffentemp[2]" at or2time.vhd(25)
+Info (10041): Inferred latch for "vffentemp[3]" at or2time.vhd(25)
+Warning: Latch state_controller:u12|next_state.start_reset_180 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.stop
+Warning: Latch or2total:u16|total[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[13]
+Warning: Latch state_controller:u12|next_state.stop_161 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|COM~1
+Warning: Latch state_controller:u12|next_state.beyond_starting_price_123 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.beyond_starting_price
+Warning: Latch state_controller:u12|next_state.within_starting_price_142 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.within_starting_price
+Warning: Latch starting_price:u14|total_price[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch starting_price:u14|total_price[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal state_controller:u12|current_state.start_reset
+Warning: Latch or2total:u16|total[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[12]
+Warning: Latch or2total:u16|total[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[11]
+Warning: Latch or2total:u16|total[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[10]
+Warning: Latch or2total:u16|total[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[9]
+Warning: Latch or2total:u16|total[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[8]
+Warning: Latch or2total:u16|total[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[7]
+Warning: Latch or5price:u29|price[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[6]
+Warning: Latch or5price:u29|price[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[5]
+Warning: Latch or5price:u29|price[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[4]
+Warning: Latch or5price:u29|price[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[3]
+Warning: Latch or5price:u29|price[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[2]
+Warning: Latch or5price:u29|price[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[1]
+Warning: Latch or5price:u29|price[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Latch or2total:u16|total[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal unit_price:u15|total_price[0]
+Warning: Latch or5price:u29|price[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal set_price:u27|pricesel[31]
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "outpdistance[7]" is stuck at GND
+Info: Registers with preset signals will power-up high
+Info: Implemented 2489 device resources after synthesis - the final resource count might be different
+    Info: Implemented 8 input pins
+    Info: Implemented 33 output pins
+    Info: Implemented 2448 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 140 warnings
+    Info: Peak virtual memory: 260 megabytes
+    Info: Processing ended: Sat Jan 05 14:58:14 2019
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:14
+
+
