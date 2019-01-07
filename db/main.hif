@@ -440,45 +440,6 @@ state_controller:u12
 
 # end
 # entity
-lingcheng
-# storage
-db|main.(13).cnf
-db|main.(13).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lingcheng.vhd
-7d28efe776e34a2f3e6d787cbdac6a55
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(settime)
-10 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-lingcheng:u13
-}
-# lmf
-..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 settime
 # storage
 db|main.(20).cnf
@@ -1306,39 +1267,6 @@ drivetime:u5
 
 # end
 # entity
-main
-# storage
-db|main.(0).cnf
-db|main.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-main.vhd
-29d275a4dc8d1cfb79efb610387292bf
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
-}
-# lmf
-..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 bee
 # storage
 db|main.(32).cnf
@@ -1364,6 +1292,78 @@ ON
 }
 # hierarchies {
 bee:u30
+}
+# lmf
+..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|main.(0).cnf
+db|main.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+main.vhd
+549a96dce7e89172d5fc44eaa3bcd922
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lingcheng
+# storage
+db|main.(13).cnf
+db|main.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lingcheng.vhd
+b2883622e93f699d74a6c6163e9ca72f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(settime)
+10 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+lingcheng:u13
 }
 # lmf
 ..|..|vhdl|portableapps|quartus90sp2portable|app|quartus|altera|90sp2|quartus|lmf|maxplus2.lmf

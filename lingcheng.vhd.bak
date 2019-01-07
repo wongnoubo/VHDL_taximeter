@@ -41,7 +41,7 @@ process(clk,settime)
 				time:=time + 1;
 			else
 				time:=0;
-				mins:=min+1;
+				mins:=mins+1;
 			end if;
 			--6h
 			if mins < 360 then

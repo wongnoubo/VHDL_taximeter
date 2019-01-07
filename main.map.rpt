@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sat Jan 05 22:27:18 2019
+Mon Jan 07 18:31:13 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -84,12 +84,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Jan 05 22:27:18 2019        ;
+; Analysis & Synthesis Status ; Successful - Mon Jan 07 18:31:13 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; main                                         ;
 ; Top-level Entity Name       ; main                                         ;
 ; Family                      ; Cyclone                                      ;
-; Total logic elements        ; 2,445                                        ;
+; Total logic elements        ; 2,441                                        ;
 ; Total pins                  ; 42                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; Total memory bits           ; 0                                            ;
@@ -209,20 +209,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 2445  ;
-;     -- Combinational with no register       ; 1494  ;
+; Total logic elements                        ; 2441  ;
+;     -- Combinational with no register       ; 1490  ;
 ;     -- Register only                        ; 101   ;
 ;     -- Combinational with a register        ; 850   ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 959   ;
-;     -- 3 input functions                    ; 470   ;
+;     -- 4 input functions                    ; 945   ;
+;     -- 3 input functions                    ; 480   ;
 ;     -- 2 input functions                    ; 866   ;
 ;     -- 1 input functions                    ; 47    ;
 ;     -- 0 input functions                    ; 2     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1626  ;
+;     -- normal mode                          ; 1622  ;
 ;     -- arithmetic mode                      ; 819   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -234,8 +234,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 42    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 929   ;
-; Total fan-out                               ; 8948  ;
-; Average fan-out                             ; 3.60  ;
+; Total fan-out                               ; 8922  ;
+; Average fan-out                             ; 3.59  ;
 +---------------------------------------------+-------+
 
 
@@ -244,7 +244,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
-; |main                      ; 2445 (1)    ; 951          ; 0           ; 42   ; 0            ; 1494 (1)     ; 101 (0)           ; 850 (0)          ; 880 (0)         ; 0 (0)      ; |main                                          ; work         ;
+; |main                      ; 2441 (1)    ; 951          ; 0           ; 42   ; 0            ; 1490 (1)     ; 101 (0)           ; 850 (0)          ; 880 (0)         ; 0 (0)      ; |main                                          ; work         ;
 ;    |SetInit:u24|           ; 498 (498)   ; 161          ; 0           ; 0    ; 0            ; 337 (337)    ; 0 (0)             ; 161 (161)        ; 192 (192)       ; 0 (0)      ; |main|SetInit:u24                              ; work         ;
 ;    |bee:u30|               ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|bee:u30                                  ; work         ;
 ;    |countplus:u6|          ; 11 (11)     ; 11           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 11 (11)          ; 10 (10)         ; 0 (0)      ; |main|countplus:u6                             ; work         ;
@@ -255,8 +255,8 @@ applicable agreement for further details.
 ;    |displaytime:u9|        ; 54 (54)     ; 16           ; 0           ; 0    ; 0            ; 38 (38)      ; 6 (6)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |main|displaytime:u9                           ; work         ;
 ;    |drivetime:u5|          ; 35 (35)     ; 11           ; 0           ; 0    ; 0            ; 24 (24)      ; 10 (10)           ; 1 (1)            ; 10 (10)         ; 0 (0)      ; |main|drivetime:u5                             ; work         ;
 ;    |hl:u1|                 ; 9 (9)       ; 5            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |main|hl:u1                                    ; work         ;
-;    |licheng:u2|            ; 156 (156)   ; 23           ; 0           ; 0    ; 0            ; 133 (133)    ; 0 (0)             ; 23 (23)          ; 34 (34)         ; 0 (0)      ; |main|licheng:u2                               ; work         ;
-;    |lingcheng:u13|         ; 55 (55)     ; 18           ; 0           ; 0    ; 0            ; 37 (37)      ; 0 (0)             ; 18 (18)          ; 17 (17)         ; 0 (0)      ; |main|lingcheng:u13                            ; work         ;
+;    |licheng:u2|            ; 155 (155)   ; 23           ; 0           ; 0    ; 0            ; 132 (132)    ; 0 (0)             ; 23 (23)          ; 34 (34)         ; 0 (0)      ; |main|licheng:u2                               ; work         ;
+;    |lingcheng:u13|         ; 52 (52)     ; 18           ; 0           ; 0    ; 0            ; 34 (34)      ; 0 (0)             ; 18 (18)          ; 17 (17)         ; 0 (0)      ; |main|lingcheng:u13                            ; work         ;
 ;    |or2time:u29|           ; 65 (65)     ; 0            ; 0           ; 0    ; 0            ; 65 (65)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or2time:u29                              ; work         ;
 ;    |or2total:u16|          ; 48 (48)     ; 0            ; 0           ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or2total:u16                             ; work         ;
 ;    |or5price:u28|          ; 37 (37)     ; 0            ; 0           ; 0    ; 0            ; 37 (37)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|or5price:u28                             ; work         ;
@@ -601,17 +601,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |main|SetInit:u24|bit_sel[4]                         ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|total_price[4]                  ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|d[12]                              ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|c[14]                              ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|a[30]                              ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |main|SetInit:u24|b[16]                              ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_jiao[10]      ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_jiao[19]    ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_yuan[27]      ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_yuan[15]    ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_jiao[19] ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_yuan[31] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|total_price[7]                  ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|d[11]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|c[13]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|SetInit:u24|a[31]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |main|SetInit:u24|b[15]                              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_jiao[23]      ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_jiao[18]    ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_yuan[17]      ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_yuan[25]    ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_jiao[18] ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_yuan[18] ;
 ; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_timing_price_jiao[27]        ;
 ; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_timing_price_yuan[20]        ;
 ; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |main|set_price:u26|day_mileage_price_jiao[14]       ;
@@ -620,54 +620,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |main|total_run:u4|run[7]                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|licheng:u2|twenty[3]                           ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |main|set_price:u26|pricesel[4]                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combd[0]                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combc[2]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combd[3]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combc[3]                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u10|combb[2]                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combd[0]                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combc[0]                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combb[0]                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combd[3]                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combc[1]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separateprice:u17|combb[1]                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combd[2]                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combc[0]                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|separatetime:u8|combb[0]                       ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|timing_price_sum[4]             ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|timing_price_sum[12]            ;
 ; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|unit_price:u15|mileage_price_sum[0]            ;
 ; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |main|lingcheng:u13|mins[5]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separateprice:u10|comba[1]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separateprice:u10|comba[3]                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separateprice:u17|comba[0]                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separatetime:u8|comba[0]                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|separatetime:u8|comba[3]                       ;
 ; 5:1                ; 11 bits   ; 33 LEs        ; 11 LEs               ; 22 LEs                 ; Yes        ; |main|separatetime:u8|comb[8]                        ;
 ; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |main|licheng:u2|run[1]                              ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|lingcheng:u13|time[0]                          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|min_f[0]                           ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|min_s[0]                           ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|a[1]                               ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|SetInit:u24|hour_f[0]                          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_j[3]          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_j[3]        ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_y[3]          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_y[2]        ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_jiao[3]  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_yuan[3]  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_timing_price_j[0]            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|lingcheng:u13|time[3]                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|min_f[2]                           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|min_s[2]                           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|SetInit:u24|a[3]                               ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|SetInit:u24|hour_f[2]                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_j[0]          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_j[0]        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_starting_price_y[1]          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|night_starting_price_y[1]        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_jiao[2]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_long_distance_price_yuan[1]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_timing_price_j[3]            ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_timing_price_yuan[3]         ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_mileage_price_j[3]           ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main|set_price:u26|day_mileage_price_y[3]           ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|licheng:u2|twenty[1]                           ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|licheng:u2|twofive[1]                          ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |main|displaydistance:u11|outp[4]                    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |main|set_price:u26|pricesel[31]                     ;
-; 27:1               ; 6 bits    ; 108 LEs       ; 78 LEs               ; 30 LEs                 ; Yes        ; |main|displayprice:u18|outp[0]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |main|or2total:u16|total[6]~13                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|set_price:u26|price_sel~60                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u24|bit_sel~34                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u24|b~55                               ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|licheng:u2|twofive[0]                          ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; Yes        ; |main|displaydistance:u11|outp[2]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |main|set_price:u26|pricesel[0]                      ;
+; 27:1               ; 6 bits    ; 108 LEs       ; 78 LEs               ; 30 LEs                 ; Yes        ; |main|displayprice:u18|outp[2]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |main|or2total:u16|total[7]~15                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|set_price:u26|price_sel~61                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u24|bit_sel~58                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |main|SetInit:u24|b~37                               ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|unit_price:u15|Add3                            ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|unit_price:u15|Add3                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twenty~16                           ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |main|displayprice:u18|Mux5                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twenty~17                           ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |main|displayprice:u18|Mux6                          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twenty~19                           ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|licheng:u2|twofive~23                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main|or5price:u28|price[7]~37                       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main|or5price:u28|price[2]~22                       ;
 ; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; No         ; |main|licheng:u2|run~43                              ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |main|licheng:u2|twenty~34                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
@@ -1135,7 +1135,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Jan 05 22:27:06 2019
+    Info: Processing started: Mon Jan 07 18:31:00 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Info: Found 2 design units, including 1 entities, in source file mult10b.vhd
     Info: Found design unit 1: mult10b-bhv
@@ -1220,8 +1220,8 @@ Info: Found 2 design units, including 1 entities, in source file bee.vhd
     Info: Found design unit 1: bee-one
     Info: Found entity 1: bee
 Info: Elaborating entity "main" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(384): object "net9" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at main.vhd(388): used implicit default value for signal "net20" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(385): object "net9" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at main.vhd(389): used implicit default value for signal "net20" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info: Elaborating entity "hl" for hierarchy "hl:u1"
 Warning (10492): VHDL Process Statement warning at hl.vhd(29): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at hl.vhd(26): inferring latch(es) for signal or variable "ceout", which holds its previous value in one or more paths through the process
@@ -1484,14 +1484,14 @@ Warning: Latch or5price:u28|price[0] has unsafe behavior
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "outpdistance[7]" is stuck at GND
 Info: Registers with preset signals will power-up high
-Info: Implemented 2487 device resources after synthesis - the final resource count might be different
+Info: Implemented 2483 device resources after synthesis - the final resource count might be different
     Info: Implemented 8 input pins
     Info: Implemented 34 output pins
-    Info: Implemented 2445 logic cells
+    Info: Implemented 2441 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 141 warnings
     Info: Peak virtual memory: 260 megabytes
-    Info: Processing ended: Sat Jan 05 22:27:18 2019
-    Info: Elapsed time: 00:00:12
+    Info: Processing ended: Mon Jan 07 18:31:13 2019
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:12
 
 

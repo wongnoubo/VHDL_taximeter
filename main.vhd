@@ -261,6 +261,7 @@ architecture one of main is
 		clk	: in std_logic;
 		--声明ceout为逻辑输出，作为判断结果输出
 		ceout : out std_logic;
+		timesel : in std_logic;--时间设置模式
 		settime : in std_logic_vector(10 downto 0)
 	);
 	end component;
@@ -427,13 +428,12 @@ architecture one of main is
 	u10 : separateprice port map(ce=>key_start,load=>load0,clk=>clk,total=>net10,ge=>net16,shi=>net17,bai=>net18,qian=>net19);--出租车启动后运行的里程数总数拆分
 	u11 : displaydistance port map(ce=>key_start,load=>load0,clk=>clk,ge=>net16,shi=>net17,bai=>net18,qian=>net19,sel=>seldistance,outp=>outpdistance);--出租车启动后运行的里程数总数数码管显示
 	u12 : state_controller port map(st=>key_start,qibu=>net3,clk=>clk,load=>load0,state_pricing=>net21,tenin=>net6);--状态机
-	u13 : lingcheng port map(clk=>clk,ceout=>net22,settime=>settimenet);--凌晨状态脉冲
+	u13 : lingcheng port map(clk=>clk,ceout=>net22,settime=>settimenet,timesel=>key_timenet);--凌晨状态脉冲
 	u14 : starting_price port map(st=>key_start,load=>net20,night=>net22,clk=>clk,state_pricing=>net21,total_price=>net23,day_starting_price=>day_starting_pricenet,night_starting_price=>night_starting_pricenet);--起步价内计价模块
 	u15 : unit_price port map(st=>key_start,load=>net20,night=>net22,clk=>clk,state_pricing=>net21,yuancheng=>net4,minin=>net5,dp=>net2,total_price=>net24,day_starting_price=>day_starting_pricenet,night_starting_price=>night_starting_pricenet,day_timing_price=>day_timing_pricenet,day_long_distance_price=>day_long_distance_pricenet,day_mileage_price=>day_mileage_pricenet);--起步价外计价模块
 	u16 : or2total port map(ce=>key_start,total1=>net24,total2=>net23,total=>net25,pricesel=>priceselnet,price=>pricenet);
 	u17 : separateprice port map(ce=>key_start,load=>load0,clk=>clk,total=>net25,ge=>net26,shi=>net27,bai=>net28,qian=>net29);--价格拆分
 	u18 : displayprice port map(ce=>key_start,load=>load0,clk=>clk,a=>net26,b=>net27,c=>net28,d=>net29,sel=>selprice,outp=>outpprice);--价格显示
-	--u19 : remove_jitter port map(clk=>clk,ce=>key_start,load=>load0,key_in=>key_start,key_out=>startnet);--开始按键消抖
 	u19 : remove_jitter port map(clk=>clk,ce=>key_start,load=>load0,key_in=>key_time,key_out=>key_timenet);--设置初始时间按键消抖
 	u20 : remove_jitter port map(clk=>clk,ce=>key_start,load=>load0,key_in=>key_select,key_out=>key_selectnet);--选择按键消抖
 	u21 : remove_jitter port map(clk=>clk,ce=>key_start,load=>load0,key_in=>key_conform,key_out=>key_conformnet);--确认按键消抖
